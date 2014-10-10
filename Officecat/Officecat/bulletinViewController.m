@@ -24,7 +24,7 @@
     rideTable.delegate = self;
     rideTable.dataSource = self;
     
-    // botton buttons text colour
+    // bottom buttons text colour
     [getRideButton setTitleColor:[GlobalFn getColor:2] forState:UIControlStateNormal];
     [shareTaxiButton setTitleColor:[GlobalFn getColor:2] forState:UIControlStateNormal];
     [giveRideButton setTitleColor:[GlobalFn getColor:2] forState:UIControlStateNormal];

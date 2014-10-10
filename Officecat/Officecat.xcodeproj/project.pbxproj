@@ -206,6 +206,8 @@
 		8699BA1B19D57E6200FF6B37 /* intro1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8699BA1919D57E6200FF6B37 /* intro1.jpg */; };
 		86DA37E419D7E76B009AABEA /* GlobalFn.m in Sources */ = {isa = PBXBuildFile; fileRef = 86DA37E319D7E76B009AABEA /* GlobalFn.m */; };
 		875EA2C738B92A4085320486 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D67B7937B6094F58DDD9A3F1 /* libPods.a */; };
+		D5D3606619E837B9008FB59D /* getRideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5D3606519E837B9008FB59D /* getRideViewController.m */; };
+		D5D3606819E83C5A008FB59D /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D5D3606719E83C5A008FB59D /* background.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -577,6 +579,9 @@
 		8699BA1919D57E6200FF6B37 /* intro1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = intro1.jpg; sourceTree = "<group>"; };
 		86DA37E219D7E76B009AABEA /* GlobalFn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalFn.h; sourceTree = "<group>"; };
 		86DA37E319D7E76B009AABEA /* GlobalFn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalFn.m; sourceTree = "<group>"; };
+		D5D3606419E837B9008FB59D /* getRideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getRideViewController.h; sourceTree = "<group>"; };
+		D5D3606519E837B9008FB59D /* getRideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getRideViewController.m; sourceTree = "<group>"; };
+		D5D3606719E83C5A008FB59D /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
 		D67B7937B6094F58DDD9A3F1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -659,6 +664,8 @@
 			children = (
 				8646B05C19E91B9500CD1F6D /* bulletinViewController.h */,
 				8646B05D19E91B9500CD1F6D /* bulletinViewController.m */,
+				D5D3606419E837B9008FB59D /* getRideViewController.h */,
+				D5D3606519E837B9008FB59D /* getRideViewController.m */,
 			);
 			name = Bulletin;
 			sourceTree = "<group>";
@@ -1645,6 +1652,7 @@
 		8690397A19D0848300C7105F /* images */ = {
 			isa = PBXGroup;
 			children = (
+				D5D3606719E83C5A008FB59D /* background.jpg */,
 				8646B06119E9228200CD1F6D /* wallpaper1.jpg */,
 				8673666519DFF8B400878417 /* seperator.jpg */,
 				8606C6FD19DFF6A2006AC140 /* historyIcon.jpg */,
@@ -1764,6 +1772,7 @@
 				8690394D19D0835300C7105F /* InfoPlist.strings in Resources */,
 				8606C6E919DFDFF0006AC140 /* logo.jpg in Resources */,
 				8606C70219DFF6A2006AC140 /* historyIcon.jpg in Resources */,
+				D5D3606819E83C5A008FB59D /* background.jpg in Resources */,
 				8658EA8F19E56425008A6DC1 /* menu ico.png in Resources */,
 				8606C70619DFF6A2006AC140 /* usersIcon.jpg in Resources */,
 				8658EA8D19E56425008A6DC1 /* car.png in Resources */,
@@ -1853,6 +1862,7 @@
 				8690395319D0835300C7105F /* AppDelegate.m in Sources */,
 				8651AEA019DDC9E10086CA01 /* DDAbstractDatabaseLogger.m in Sources */,
 				8651ADFA19DDC7D90086CA01 /* XMPPXFacebookPlatformAuthentication.m in Sources */,
+				D5D3606619E837B9008FB59D /* getRideViewController.m in Sources */,
 				8651ADF819DDC7D90086CA01 /* XMPPPlainAuthentication.m in Sources */,
 				8651AE2019DDC7D90086CA01 /* XMPPRoomHybrid.xcdatamodeld in Sources */,
 				8651AE4019DDC7D90086CA01 /* XMPPMessage+XEP_0085.m in Sources */,
