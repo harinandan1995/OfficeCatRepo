@@ -208,6 +208,7 @@
 		875EA2C738B92A4085320486 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D67B7937B6094F58DDD9A3F1 /* libPods.a */; };
 		D5D3606619E837B9008FB59D /* getRideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5D3606519E837B9008FB59D /* getRideViewController.m */; };
 		D5D3606819E83C5A008FB59D /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D5D3606719E83C5A008FB59D /* background.jpg */; };
+		D5D3606B19E85155008FB59D /* giveRideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5D3606A19E85155008FB59D /* giveRideViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -582,6 +583,8 @@
 		D5D3606419E837B9008FB59D /* getRideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getRideViewController.h; sourceTree = "<group>"; };
 		D5D3606519E837B9008FB59D /* getRideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getRideViewController.m; sourceTree = "<group>"; };
 		D5D3606719E83C5A008FB59D /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
+		D5D3606919E85154008FB59D /* giveRideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = giveRideViewController.h; sourceTree = "<group>"; };
+		D5D3606A19E85155008FB59D /* giveRideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = giveRideViewController.m; sourceTree = "<group>"; };
 		D67B7937B6094F58DDD9A3F1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -666,6 +669,8 @@
 				8646B05D19E91B9500CD1F6D /* bulletinViewController.m */,
 				D5D3606419E837B9008FB59D /* getRideViewController.h */,
 				D5D3606519E837B9008FB59D /* getRideViewController.m */,
+				D5D3606919E85154008FB59D /* giveRideViewController.h */,
+				D5D3606A19E85155008FB59D /* giveRideViewController.m */,
 			);
 			name = Bulletin;
 			sourceTree = "<group>";
@@ -1893,6 +1898,7 @@
 				8651AE4B19DDC7D90086CA01 /* XMPPMessageArchiving_Message_CoreDataObject.m in Sources */,
 				8651ADF419DDC7D90086CA01 /* XMPPAnonymousAuthentication.m in Sources */,
 				8651AE1E19DDC7D90086CA01 /* XMPPRoomMessageCoreDataStorageObject.m in Sources */,
+				D5D3606B19E85155008FB59D /* giveRideViewController.m in Sources */,
 				8651AE2B19DDC7D90086CA01 /* XMPPvCardAvatarCoreDataStorageObject.m in Sources */,
 				8651AE5219DDC7D90086CA01 /* XMPPMessageDeliveryReceipts.m in Sources */,
 				8606C6EF19DFE190006AC140 /* chatViewController.m in Sources */,
