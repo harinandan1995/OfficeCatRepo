@@ -16,10 +16,13 @@
     IBOutlet UIButton *getRideButton;
     IBOutlet UIButton *shareTaxiButton;
     IBOutlet UIButton *giveRideButton;
+    IBOutlet UIButton *menuButton;
+    IBOutlet UIView *menuView;
     NSMutableArray *rideArray;
     NSString *password;
 }
 
 @property (nonatomic , readonly) XMPPStream *xmppStream;
+-(IBAction)menuAction:(id)sender;
 
 @end

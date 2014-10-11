@@ -149,16 +149,17 @@
                                 <rect key="frame" x="0.0" y="501" width="320" height="67"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="O2a-C8-qZY">
-                                <rect key="frame" x="81" y="79" width="320" height="421"/>
+                                <rect key="frame" x="55" y="79" width="320" height="421"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3lW-oV-JPG">
-                                <rect key="frame" x="16" y="38" width="26" height="19"/>
+                                <rect key="frame" x="13" y="38" width="26" height="19"/>
                                 <state key="normal" title="Button" image="menu ico.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="menuAction:" destination="P5Q-1d-km3" eventType="touchUpInside" id="Q74-yF-ffj"/>
+                                    <action selector="menuAction:" destination="dtE-2G-9TX" eventType="touchUpInside" id="a6F-pP-4Ka"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="car.png" translatesAutoresizingMaskIntoConstraints="NO" id="lpa-la-G74">
@@ -177,74 +178,80 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dIn-68-cMP">
-                                <rect key="frame" x="0.0" y="508" width="89" height="60"/>
+                                <rect key="frame" x="2" y="508" width="89" height="60"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Get Ride">
+                                <state key="normal" title="GET RIDE">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gxl-qp-saQ">
                                 <rect key="frame" x="116" y="508" width="89" height="59"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Share Taxi">
+                                <state key="normal" title="SHARE TAXI">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gJ1-qi-abT">
                                 <rect key="frame" x="209" y="508" width="111" height="60"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="Give Ride">
+                                <state key="normal" title="GIVE RIDE">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wHg-84-gTk">
-                                <rect key="frame" x="7" y="82" width="65" height="455"/>
+                                <rect key="frame" x="0.0" y="79" width="53" height="421"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ev-bI-8sH">
-                                        <rect key="frame" x="0.0" y="2" width="65" height="83"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="53" height="80"/>
                                         <state key="normal" title="Button" image="profileIcon.jpg">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FwC-OY-dV6">
-                                        <rect key="frame" x="0.0" y="91" width="65" height="83"/>
+                                        <rect key="frame" x="0.0" y="82" width="53" height="83"/>
                                         <state key="normal" title="Button" image="paymentsIcon.jpg">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KsH-5B-eFt">
-                                        <rect key="frame" x="0.0" y="185" width="65" height="83"/>
+                                        <rect key="frame" x="0.0" y="168" width="53" height="87"/>
                                         <state key="normal" title="Button" image="usersIcon.jpg">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mNV-dw-oK6">
-                                        <rect key="frame" x="0.0" y="279" width="65" height="83"/>
+                                        <rect key="frame" x="0.0" y="267" width="53" height="77"/>
                                         <state key="normal" title="Button" image="historyIcon.jpg">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fvx-su-fix">
-                                        <rect key="frame" x="0.0" y="372" width="65" height="83"/>
+                                        <rect key="frame" x="0.0" y="344" width="53" height="69"/>
                                         <state key="normal" title="Button" image="settingsIcon.jpg">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="seperator.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="NiY-ku-2hG">
-                                        <rect key="frame" x="0.0" y="80" width="65" height="15"/>
-                                    </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="seperator.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ahK-y1-qeH">
-                                        <rect key="frame" x="0.0" y="172" width="65" height="15"/>
+                                        <rect key="frame" x="0.0" y="78" width="53" height="15"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="seperator.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="lhs-Mq-q4L">
-                                        <rect key="frame" x="0.0" y="266" width="65" height="15"/>
+                                        <rect key="frame" x="0.0" y="254" width="53" height="15"/>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="seperator.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="6SK-Eh-ElU">
-                                        <rect key="frame" x="0.0" y="360" width="65" height="15"/>
+                                        <rect key="frame" x="0.0" y="341" width="53" height="15"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="seperator.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ahK-y1-qeH">
+                                        <rect key="frame" x="0.0" y="164" width="53" height="15"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="seperator2.png" translatesAutoresizingMaskIntoConstraints="NO" id="k6P-e1-RNJ">
+                                <rect key="frame" x="83" y="508" width="29" height="53"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="seperator2.png" translatesAutoresizingMaskIntoConstraints="NO" id="yXR-p5-ExW">
+                                <rect key="frame" x="201" y="508" width="29" height="53"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -252,6 +259,8 @@
                         <outlet property="bottomImage" destination="LjG-nN-dHw" id="JBG-O2-jYt"/>
                         <outlet property="getRideButton" destination="dIn-68-cMP" id="dsE-QR-aLY"/>
                         <outlet property="giveRideButton" destination="gJ1-qi-abT" id="NgU-YR-XEU"/>
+                        <outlet property="menuButton" destination="3lW-oV-JPG" id="v5J-9K-DwV"/>
+                        <outlet property="menuView" destination="wHg-84-gTk" id="0ZO-uJ-Hq2"/>
                         <outlet property="navigationView" destination="OkJ-ou-nvI" id="WNf-UB-F2K"/>
                         <outlet property="rideTable" destination="O2a-C8-qZY" id="eOo-RF-lRG"/>
                         <outlet property="shareTaxiButton" destination="gxl-qp-saQ" id="fh4-OF-dct"/>
@@ -282,15 +291,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1AQ-fJ-N36">
-                                <rect key="frame" x="16" y="38" width="26" height="19"/>
-                                <state key="normal" title="Button" image="menu ico.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="menuAction:" destination="P5Q-1d-km3" eventType="touchUpInside" id="cOl-LH-aGE"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="car.png" translatesAutoresizingMaskIntoConstraints="NO" id="PxA-mt-VKv">
                                 <rect key="frame" x="121" y="28" width="70" height="40"/>
                             </imageView>
@@ -401,6 +401,13 @@
                                     <action selector="taxiSwitchAction:" destination="s7P-rZ-MmX" eventType="valueChanged" id="z8q-Bi-xN2"/>
                                 </connections>
                             </switch>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1AQ-fJ-N36">
+                                <rect key="frame" x="16" y="38" width="48" height="22"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="menuAction:" destination="P5Q-1d-km3" eventType="touchUpInside" id="cOl-LH-aGE"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -857,6 +864,7 @@
         <image name="profileIcon.jpg" width="169" height="203"/>
         <image name="search.jpg" width="126" height="93"/>
         <image name="seperator.jpg" width="170" height="21"/>
+        <image name="seperator2.png" width="576" height="1024"/>
         <image name="serch ico.png" width="60" height="48"/>
         <image name="settingsIcon.jpg" width="159" height="188"/>
         <image name="usersIcon.jpg" width="170" height="228"/>

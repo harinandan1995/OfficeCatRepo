@@ -22,6 +22,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [GlobalFn getColor:1];
+    menuView.backgroundColor = [GlobalFn getColor:2];
+    menuView.layer.masksToBounds = YES;
+    //menuView.layer.borderWidth = 2;
     rideArray = [[NSMutableArray alloc] init];
     rideTable.delegate = self;
     rideTable.dataSource = self;
@@ -68,7 +71,7 @@
     [rideArray addObject:help];
     help = [[NSMutableDictionary alloc] init];
     [help setObject:@"Pankaj Saraf" forKey:@"name"];
-    [help setObject:@"profile1.jpg" forKey:@"profilepic"];
+    [help setObject:@"profile2.jpg" forKey:@"profilepic"];
     [help setObject:@"India Bulls, Lower Parel" forKey:@"from"];
     [help setObject:@"Kala Ghod, Fort" forKey:@"to"];
     [help setObject:@"3 Apr, 2007" forKey:@"date"];
@@ -163,6 +166,8 @@
     else{
         cell.typeLabel.text = @"Give ride";
         cell.view.backgroundColor = [GlobalFn getColor:4];
+        cell.backgroundColor = [GlobalFn getColor:0];
+        cell.typeLabel.textColor = [UIColor whiteColor];
     }
     
     return cell;
@@ -173,7 +178,46 @@
     return 85;
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+-(IBAction)menuAction:(id)sender
+{
+    menuButton.enabled = NO;
+    if(menuView.hidden){
+        menuView.hidden = NO;
+        [UIView animateWithDuration:0.3
+                         animations:^{
+                             //menuView.center = CGPointMake(menuView.center.x,                                                           menuView.center.y-480);
+                             menuView.alpha = 1.0;
+                             rideTable.center = CGPointMake(rideTable.center.x+55,
+                                                                  rideTable.center.y);
+                         }
+                         completion:^(BOOL finished){
+                             menuButton.enabled = YES;
+                             //menuView.hidden = YES;
+                         }
+         ];
+        
+        
+    }
+    else{
+        [UIView animateWithDuration:0.3
+                         animations:^{
+                             //menuView.center = CGPointMake(menuView.center.x,                                                           menuView.center.y+480);
+                             menuView.alpha = 0.0;
+                             rideTable.center = CGPointMake(rideTable.center.x-55,
+                                                                  rideTable.center.y);
+                         }
+                         completion:^(BOOL finished){
+                             menuButton.enabled = YES;
+                             menuView.hidden = YES;
+                         }
+         ];
+    }
+    
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 - (void)setupStream {
     xmppStream = [[XMPPStream alloc] init];
