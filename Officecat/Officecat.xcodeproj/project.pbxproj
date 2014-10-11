@@ -26,6 +26,11 @@
 		8633D21919D5A63C00FCBBBE /* verifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8633D21819D5A63C00FCBBBE /* verifyViewController.m */; };
 		8633D21D19D5A9CA00FCBBBE /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 8633D21C19D5A9CA00FCBBBE /* UIView+Toast.m */; };
 		863F8BE119D58DB800331663 /* ServerCall.m in Sources */ = {isa = PBXBuildFile; fileRef = 863F8BE019D58DB800331663 /* ServerCall.m */; };
+		8646B05A19E91A4600CD1F6D /* ILTranslucentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8646B05919E91A4600CD1F6D /* ILTranslucentView.m */; };
+		8646B05E19E91B9500CD1F6D /* bulletinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8646B05D19E91B9500CD1F6D /* bulletinViewController.m */; };
+		8646B06219E9228200CD1F6D /* wallpaper1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8646B06119E9228200CD1F6D /* wallpaper1.jpg */; };
+		8646B06719E9230F00CD1F6D /* bulletinTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8646B06519E9230F00CD1F6D /* bulletinTableViewCell.m */; };
+		8646B06819E9230F00CD1F6D /* bulletinTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8646B06619E9230F00CD1F6D /* bulletinTableViewCell.xib */; };
 		8651ADF419DDC7D90086CA01 /* XMPPAnonymousAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = 8651ACDA19DDC7D80086CA01 /* XMPPAnonymousAuthentication.m */; };
 		8651ADF519DDC7D90086CA01 /* XMPPDeprecatedDigestAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = 8651ACDD19DDC7D80086CA01 /* XMPPDeprecatedDigestAuthentication.m */; };
 		8651ADF619DDC7D90086CA01 /* XMPPDeprecatedPlainAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = 8651ACE019DDC7D80086CA01 /* XMPPDeprecatedPlainAuthentication.m */; };
@@ -240,6 +245,14 @@
 		8633D21C19D5A9CA00FCBBBE /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
 		863F8BDF19D58DB800331663 /* ServerCall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerCall.h; sourceTree = "<group>"; };
 		863F8BE019D58DB800331663 /* ServerCall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerCall.m; sourceTree = "<group>"; };
+		8646B05819E91A4600CD1F6D /* ILTranslucentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILTranslucentView.h; sourceTree = "<group>"; };
+		8646B05919E91A4600CD1F6D /* ILTranslucentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILTranslucentView.m; sourceTree = "<group>"; };
+		8646B05C19E91B9500CD1F6D /* bulletinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bulletinViewController.h; sourceTree = "<group>"; };
+		8646B05D19E91B9500CD1F6D /* bulletinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = bulletinViewController.m; sourceTree = "<group>"; };
+		8646B06119E9228200CD1F6D /* wallpaper1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wallpaper1.jpg; sourceTree = "<group>"; };
+		8646B06419E9230F00CD1F6D /* bulletinTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bulletinTableViewCell.h; sourceTree = "<group>"; };
+		8646B06519E9230F00CD1F6D /* bulletinTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = bulletinTableViewCell.m; sourceTree = "<group>"; };
+		8646B06619E9230F00CD1F6D /* bulletinTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = bulletinTableViewCell.xib; sourceTree = "<group>"; };
 		8651ACD919DDC7D80086CA01 /* XMPPAnonymousAuthentication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMPPAnonymousAuthentication.h; sourceTree = "<group>"; };
 		8651ACDA19DDC7D80086CA01 /* XMPPAnonymousAuthentication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMPPAnonymousAuthentication.m; sourceTree = "<group>"; };
 		8651ACDC19DDC7D80086CA01 /* XMPPDeprecatedDigestAuthentication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMPPDeprecatedDigestAuthentication.h; sourceTree = "<group>"; };
@@ -630,6 +643,34 @@
 				86DA37E319D7E76B009AABEA /* GlobalFn.m */,
 			);
 			name = GlobalFunctions;
+			sourceTree = "<group>";
+		};
+		8646B05719E91A3A00CD1F6D /* TranslucentView */ = {
+			isa = PBXGroup;
+			children = (
+				8646B05819E91A4600CD1F6D /* ILTranslucentView.h */,
+				8646B05919E91A4600CD1F6D /* ILTranslucentView.m */,
+			);
+			name = TranslucentView;
+			sourceTree = "<group>";
+		};
+		8646B05B19E91B5A00CD1F6D /* Bulletin */ = {
+			isa = PBXGroup;
+			children = (
+				8646B05C19E91B9500CD1F6D /* bulletinViewController.h */,
+				8646B05D19E91B9500CD1F6D /* bulletinViewController.m */,
+			);
+			name = Bulletin;
+			sourceTree = "<group>";
+		};
+		8646B06319E922F300CD1F6D /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				8646B06419E9230F00CD1F6D /* bulletinTableViewCell.h */,
+				8646B06519E9230F00CD1F6D /* bulletinTableViewCell.m */,
+				8646B06619E9230F00CD1F6D /* bulletinTableViewCell.xib */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 		8651ACD619DDC7CB0086CA01 /* XMPP */ = {
@@ -1511,6 +1552,8 @@
 		8690393619D0835300C7105F = {
 			isa = PBXGroup;
 			children = (
+				8646B06319E922F300CD1F6D /* Cells */,
+				8646B05719E91A3A00CD1F6D /* TranslucentView */,
 				8658EA7719E56425008A6DC1 /* icons */,
 				8651ACD619DDC7CB0086CA01 /* XMPP */,
 				8633D21A19D5A99600FCBBBE /* toast */,
@@ -1559,6 +1602,7 @@
 		8690394819D0835300C7105F /* Officecat */ = {
 			isa = PBXGroup;
 			children = (
+				8646B05B19E91B5A00CD1F6D /* Bulletin */,
 				8651AEC219DDCAF10086CA01 /* Chat */,
 				8680D0E819D59FD600A6E0FF /* Login/Registration */,
 				8690394919D0835300C7105F /* Supporting Files */,
@@ -1601,6 +1645,7 @@
 		8690397A19D0848300C7105F /* images */ = {
 			isa = PBXGroup;
 			children = (
+				8646B06119E9228200CD1F6D /* wallpaper1.jpg */,
 				8673666519DFF8B400878417 /* seperator.jpg */,
 				8606C6FD19DFF6A2006AC140 /* historyIcon.jpg */,
 				8606C6FE19DFF6A2006AC140 /* paymentsIcon.jpg */,
@@ -1708,7 +1753,9 @@
 				8690398119D08CD000C7105F /* download.jpeg in Resources */,
 				8606C6F719DFE797006AC140 /* profile3.jpeg in Resources */,
 				8699BA1A19D57E6200FF6B37 /* intro2.jpg in Resources */,
+				8646B06219E9228200CD1F6D /* wallpaper1.jpg in Resources */,
 				8606C70519DFF6A2006AC140 /* settingsIcon.jpg in Resources */,
+				8646B06819E9230F00CD1F6D /* bulletinTableViewCell.xib in Resources */,
 				8606C6EB19DFDFF0006AC140 /* newChat.jpg in Resources */,
 				8658EA8B19E56425008A6DC1 /* seeting ico.png in Resources */,
 				8651AEAD19DDC9E10086CA01 /* build-libidn.sh in Resources */,
@@ -1865,6 +1912,7 @@
 				8651AE2D19DDC7D90086CA01 /* XMPPvCardCoreDataStorageObject.m in Sources */,
 				8651AE1919DDC7D90086CA01 /* XMPPIQ+LastActivity.m in Sources */,
 				8651AE3519DDC7D90086CA01 /* XMPPvCardTempModule.m in Sources */,
+				8646B05A19E91A4600CD1F6D /* ILTranslucentView.m in Sources */,
 				8651AE3019DDC7D90086CA01 /* XMPPvCardTempAdr.m in Sources */,
 				8651AE1C19DDC7D90086CA01 /* XMPPRoom.xcdatamodeld in Sources */,
 				8651AEA519DDC9E10086CA01 /* DDContextFilterLogFormatter.m in Sources */,
@@ -1907,6 +1955,7 @@
 				8651AE3F19DDC7D90086CA01 /* XMPPDateTimeProfiles.m in Sources */,
 				8651AEA219DDC9E10086CA01 /* DDFileLogger.m in Sources */,
 				8651AE5419DDC7D90086CA01 /* XMPPAutoPing.m in Sources */,
+				8646B06719E9230F00CD1F6D /* bulletinTableViewCell.m in Sources */,
 				8651AEC119DDCA140086CA01 /* XMPPStringPrep.m in Sources */,
 				8651AE3619DDC7D90086CA01 /* XMPPvCardTempTel.m in Sources */,
 				8651ADF719DDC7D90086CA01 /* XMPPDigestMD5Authentication.m in Sources */,
@@ -1918,6 +1967,7 @@
 				8651AEBE19DDCA140086CA01 /* RFImageToDataTransformer.m in Sources */,
 				8651ADFC19DDC7D90086CA01 /* NSData+XMPP.m in Sources */,
 				8651AE5C19DDC7D90086CA01 /* NSXMLElement+XEP_0297.m in Sources */,
+				8646B05E19E91B9500CD1F6D /* bulletinViewController.m in Sources */,
 				8651AE2219DDC7D90086CA01 /* XMPPRoomMessageHybridCoreDataStorageObject.m in Sources */,
 				8651AEA719DDC9E10086CA01 /* DDMultiFormatter.m in Sources */,
 				8651AE4519DDC7D90086CA01 /* XMPPCapabilitiesCoreDataStorage.m in Sources */,

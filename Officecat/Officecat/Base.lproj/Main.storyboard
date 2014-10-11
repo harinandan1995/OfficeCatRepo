@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A379b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="irV-Zg-Kcx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A379b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="dtE-2G-9TX">
     <dependencies>
         <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
@@ -178,6 +178,89 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bQc-kw-ncJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="159" y="768"/>
+        </scene>
+        <!--Bulletin View Controller-->
+        <scene sceneID="pN0-zO-chg">
+            <objects>
+                <viewController id="dtE-2G-9TX" customClass="bulletinViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HR5-4b-Wr1"/>
+                        <viewControllerLayoutGuide type="bottom" id="Zmn-je-Jtj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="W4R-0b-VlZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="wallpaper1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="OkJ-ou-nvI">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="wallpaper1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="LjG-nN-dHw">
+                                <rect key="frame" x="0.0" y="501" width="320" height="67"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="O2a-C8-qZY">
+                                <rect key="frame" x="0.0" y="79" width="320" height="421"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3lW-oV-JPG">
+                                <rect key="frame" x="16" y="38" width="26" height="19"/>
+                                <state key="normal" title="Button" image="menu ico.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="menuAction:" destination="P5Q-1d-km3" eventType="touchUpInside" id="Q74-yF-ffj"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="car.png" translatesAutoresizingMaskIntoConstraints="NO" id="lpa-la-G74">
+                                <rect key="frame" x="121" y="28" width="70" height="40"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fU9-KP-Oxu">
+                                <rect key="frame" x="230" y="37" width="22" height="21"/>
+                                <state key="normal" title="Button" image="chat ico.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZA0-q2-I8u">
+                                <rect key="frame" x="278" y="37" width="26" height="21"/>
+                                <state key="normal" title="Button" image="serch ico.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dIn-68-cMP">
+                                <rect key="frame" x="0.0" y="508" width="89" height="60"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Get Ride">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gxl-qp-saQ">
+                                <rect key="frame" x="116" y="508" width="89" height="59"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Share Taxi">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gJ1-qi-abT">
+                                <rect key="frame" x="209" y="508" width="111" height="60"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Give Ride">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="bottomImage" destination="LjG-nN-dHw" id="JBG-O2-jYt"/>
+                        <outlet property="getRideButton" destination="dIn-68-cMP" id="dsE-QR-aLY"/>
+                        <outlet property="giveRideButton" destination="gJ1-qi-abT" id="NgU-YR-XEU"/>
+                        <outlet property="navigationView" destination="OkJ-ou-nvI" id="WNf-UB-F2K"/>
+                        <outlet property="rideTable" destination="O2a-C8-qZY" id="eOo-RF-lRG"/>
+                        <outlet property="shareTaxiButton" destination="gxl-qp-saQ" id="fh4-OF-dct"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8N9-qJ-4aF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="580" y="768"/>
         </scene>
         <!--Intro View Controller-->
         <scene sceneID="wrp-0X-kkz">
@@ -483,9 +566,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="car.png" width="107" height="53"/>
+        <image name="chat ico.png" width="57" height="47"/>
         <image name="historyIcon.jpg" width="172" height="223"/>
         <image name="intro1.jpg" width="360" height="640"/>
         <image name="logo.jpg" width="276" height="121"/>
+        <image name="menu ico.png" width="63" height="43"/>
         <image name="menuDrawer.jpg" width="137" height="93"/>
         <image name="newChat.jpg" width="109" height="84"/>
         <image name="paymentsIcon.jpg" width="174" height="204"/>
@@ -493,8 +579,10 @@
         <image name="profileIcon.jpg" width="169" height="203"/>
         <image name="search.jpg" width="126" height="93"/>
         <image name="seperator.jpg" width="170" height="21"/>
+        <image name="serch ico.png" width="60" height="48"/>
         <image name="settingsIcon.jpg" width="159" height="188"/>
         <image name="usersIcon.jpg" width="170" height="228"/>
+        <image name="wallpaper1.jpg" width="2000" height="1000"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

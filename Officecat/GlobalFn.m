@@ -94,25 +94,25 @@
 +(UIColor *)getColor:(NSInteger)num{
     switch (num) {
         case 0:
-            return  [self colorWithHexString:@"2e3135"];
+            return  [self colorWithHexString:@"2e3135"]; // Dark Gray
             break;
         case 1:
-            return  [self colorWithHexString:@"1b1e21"];
+            return  [self colorWithHexString:@"1b1e21"]; // Darker Gray
             break;
         case 2:
-            return  [self colorWithHexString:@"efcc22"];
+            return  [self colorWithHexString:@"efcc22"]; // Yellow
             break;
         case 3:
-            return  [self colorWithHexString:@"fdfcfc"];
+            return  [self colorWithHexString:@"fdfcfc"]; // White
             break;
         case 4:
-            return  [self colorWithHexString:@"f25e5e"];
+            return  [self colorWithHexString:@"f25e5e"]; // Red
             break;
         case 5:
-            return  [self colorWithHexString:@"0b685e"];
+            return  [self colorWithHexString:@"0b685e"]; // Green
             break;
         case 6:
-            return  [self colorWithHexString:@"0b0706"];
+            return  [self colorWithHexString:@"0b0706"]; // Black
             break;
             
         default:
