@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "XMPP.h"
 
 @interface bulletinViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>{
     IBOutlet UIImageView *navigationView;
@@ -16,6 +17,9 @@
     IBOutlet UIButton *shareTaxiButton;
     IBOutlet UIButton *giveRideButton;
     NSMutableArray *rideArray;
+    NSString *password;
 }
+
+@property (nonatomic , readonly) XMPPStream *xmppStream;
 
 @end

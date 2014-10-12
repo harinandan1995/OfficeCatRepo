@@ -17,6 +17,8 @@
 
 @implementation bulletinViewController
 
+@synthesize xmppStream;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [GlobalFn getColor:1];
@@ -61,7 +63,7 @@
     [help setObject:@"India Bulls, Lower Parel" forKey:@"from"];
     [help setObject:@"Kala Ghod, Fort" forKey:@"to"];
     [help setObject:@"Now O'Clock" forKey:@"date"];
-    [help setObject:@"0" forKey:@"time"];
+    [help setObject:@"6.30 P.M." forKey:@"time"];
     [help setObject:@"0" forKey:@"type"];
     [rideArray addObject:help];
     help = [[NSMutableDictionary alloc] init];
@@ -102,6 +104,8 @@
     [rideArray addObject:help];
     
     [self setNeedsStatusBarAppearanceUpdate];
+    
+    [self connect];
     
     // Do any additional setup after loading the view.
 }
@@ -171,6 +175,156 @@
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+- (void)setupStream {
+    xmppStream = [[XMPPStream alloc] init];
+    [xmppStream setHostName:@"119.81.44.122"];
+    [xmppStream setHostPort:5222];
+    [xmppStream addDelegate:self delegateQueue:dispatch_get_main_queue()];
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+- (void)goOnline {
+    XMPPPresence *presence = [XMPPPresence presence];
+    [[self xmppStream] sendElement:presence];
+}
+
+- (void)goOffline {
+    XMPPPresence *presence = [XMPPPresence presenceWithType:@"unavailable"];
+    [[self xmppStream] sendElement:presence];
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+- (BOOL)connect {
+    [self setupStream];
+    
+    //NSString *jabberID = [[NSUserDefaults standardUserDefaults] stringForKey:@"userID"];
+    //NSString *myPassword = [[NSUserDefaults standardUserDefaults] stringForKey:@"userPassword"];
+    
+    NSString *jabberID = @"abc@119.81.44.122";//@"aap@119.81.44.122";//@"aman32605%40hotmail.com@119.81.44.122";
+    NSString *myPassword = @"1729";
+    
+    if (![xmppStream isDisconnected]) {
+        return YES;
+    }
+    
+    if (jabberID == nil || myPassword == nil) {
+        return NO;
+    }
+    
+    [xmppStream setMyJID:[XMPPJID jidWithString:jabberID]];
+    //[xmppStream setMyJID:[XMPPJID jidWithUser:jabberID domain:@"119.81.44.122" resource:@"8f51f0b4"]];
+    password = myPassword;
+    
+    NSError *error = nil;
+    if (![xmppStream connectWithTimeout:1 error:&error])
+    {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error connecting"
+                                                            message:@"See console for error details."
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"Ok"
+                                                  otherButtonTitles:nil];
+        [alertView show];
+        
+        return NO;
+    }
+    
+    return YES;
+}
+
+- (void)disconnect {
+    
+    [self goOffline];
+    [xmppStream disconnect];
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+- (void)applicationWillResignActive:(UIApplication *)application {
+    [self disconnect];
+}
+
+- (void)applicationDidBecomeActive:(UIApplication *)application {
+    [self connect];
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+- (void)xmppStreamDidDisconnect:(XMPPStream *)sender withError:(NSError *)error
+{
+    if (![xmppStream isConnected])
+    {
+        NSLog(@"Unable to connect to server. Check xmppStream.hostName");
+        [self connect];
+    }
+}
+
+- (void)xmppStreamDidConnect:(XMPPStream *)sender {
+    
+    // connection to the server successful
+    
+    if ([xmppStream isDisconnected]){
+        NSLog(@"Is DisConnected");
+        [self connect];
+    }
+    if ([xmppStream isConnecting]){
+        NSLog(@"Is Connecting");
+    }
+    if ([xmppStream isConnecting]){
+        NSLog(@"Is Connecting");
+    }
+    if ([xmppStream isConnected]){
+        NSLog(@"Is Connected");
+    }
+    
+    NSError *error = nil;
+    [[self xmppStream] authenticateWithPassword:password error:&error];
+    NSLog(@"%@",error);
+    
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+- (void)xmppStreamDidAuthenticate:(XMPPStream *)sender {
+    // authentication successful
+    [self goOnline];
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+- (void)xmppStream:(XMPPStream *)sender didReceiveMessage:(XMPPMessage *)message
+{
+    // message received
+    
+    NSString *msg = [[message elementForName:@"body"] stringValue];
+    NSString *from = [[message attributeForName:@"from"] stringValue];
+    NSLog(@"%@ , %@",msg,from);
+}
+
+- (void)xmppStream:(XMPPStream *)sender didReceivePresence:(XMPPPresence *)presence {
+    // a buddy went offline/online
+    NSString *presenceType = [presence type]; // online/offline
+    NSString *myUsername = [[sender myJID] user];
+    NSString *presenceFromUser = [[presence from] user];
+    
+    if (![presenceFromUser isEqualToString:myUsername]) {
+        
+        if ([presenceType isEqualToString:@"available"]) {
+            NSLog(@"Person Online");
+            //[chatDelegate newBuddyOnline:[NSString stringWithFormat:@"%@@%@", presenceFromUser, @"119.81.44.122"]];
+            
+        } else if ([presenceType isEqualToString:@"unavailable"]) {
+            NSLog(@"Person Offline");
+            //[chatDelegate buddyWentOffline:[NSString stringWithFormat:@"%@@%@", presenceFromUser, @"119.81.44.122"]];
+            
+        }
+        
+    }
+    
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
