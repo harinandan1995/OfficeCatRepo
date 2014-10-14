@@ -15,6 +15,8 @@
 
 @implementation friendsViewController
 
+@synthesize xmppStream;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -31,33 +33,44 @@
     [help setObject:@"profile2.jpg" forKey:@"email"];
     [help setObject:@"Hey there wassup" forKey:@"lastMsg"];
     [help setObject:@"0" forKey:@"read"];
+    [help setObject:@"aap" forKey:@"id"];
     [frndsArray addObject:help];
     help = [[NSMutableDictionary alloc] init];
     [help setObject:@"Pankaj Saraf" forKey:@"name"];
     [help setObject:@"profile1.jpg" forKey:@"email"];
     [help setObject:@"Hey there wassup" forKey:@"lastMsg"];
     [help setObject:@"1" forKey:@"read"];
+    [help setObject:@"aman" forKey:@"id"];
     [frndsArray addObject:help];
     help = [[NSMutableDictionary alloc] init];
     [help setObject:@"Sai Krishna" forKey:@"name"];
     [help setObject:@"profile4.jpg" forKey:@"email"];
     [help setObject:@"Hey there wassup" forKey:@"lastMsg"];
     [help setObject:@"1" forKey:@"read"];
+    [help setObject:@"ance" forKey:@"id"];
     [frndsArray addObject:help];
     help = [[NSMutableDictionary alloc] init];
     [help setObject:@"Rohit Ranjan" forKey:@"name"];
     [help setObject:@"profile3.jpeg" forKey:@"email"];
     [help setObject:@"Hey there wassupHarinandan Teja ,Hey there wassup" forKey:@"lastMsg"];
     [help setObject:@"1" forKey:@"read"];
+    [help setObject:@"as" forKey:@"id"];
     [frndsArray addObject:help];
     help = [[NSMutableDictionary alloc] init];
     [help setObject:@"Sumanth Vakulabharanam" forKey:@"name"];
     [help setObject:@"profile5.jpeg" forKey:@"email"];
     [help setObject:@"Hey there wassup Harinandan Teja ,Hey there wassup" forKey:@"lastMsg"];
     [help setObject:@"1" forKey:@"read"];
+    [help setObject:@"avan" forKey:@"id"];
     [frndsArray addObject:help];
     
     [self setNeedsStatusBarAppearanceUpdate];
+    
+    //Setting up xmpp
+    [xmppStream addDelegate:self delegateQueue:dispatch_get_main_queue()];
+    if([xmppStream isDisconnected]){
+        [self connect];
+    }
     // Do any additional setup after loading the view.
 }
 
@@ -87,7 +100,7 @@
     }
     NSDictionary *help = [[NSDictionary alloc] init];
     help = frndsArray[indexPath.item];
-    NSLog(@"%lu, %@ ,%@",indexPath.item,help[@"email"],help[@"lastMsg"]);
+    //NSLog(@"%lu, %@ ,%@",indexPath.item,help[@"email"],help[@"lastMsg"]);
     
     cell.backgroundColor = [GlobalFn getColor:3];
     cell.layer.masksToBounds = YES;
@@ -111,37 +124,153 @@
 
 -(IBAction)menuAction:(id)sender
 {
-    menuButton.enabled = NO;
-    if(menuView.hidden){
-        menuView.hidden = NO;
-        [UIView animateWithDuration:0.3
-                         animations:^{
-                             //menuView.center = CGPointMake(menuView.center.x,                                                           menuView.center.y-480);
-                             menuView.alpha = 1.0;
-                             frndsCollection.center = CGPointMake(frndsCollection.center.x+78,
-                                                                  frndsCollection.center.y);
-                         }
-                         completion:^(BOOL finished){
-                             menuButton.enabled = YES;
-                             //menuView.hidden = YES;
-                         }
-         ];
+}
 
-        
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+- (void)setupStream {
+    xmppStream = [[XMPPStream alloc] init];
+    [xmppStream setHostName:@"119.81.44.122"];
+    [xmppStream setHostPort:5222];
+    [xmppStream addDelegate:self delegateQueue:dispatch_get_main_queue()];
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+- (void)goOnline {
+    XMPPPresence *presence = [XMPPPresence presence];
+    [[self xmppStream] sendElement:presence];
+}
+
+- (void)goOffline {
+    XMPPPresence *presence = [XMPPPresence presenceWithType:@"unavailable"];
+    [[self xmppStream] sendElement:presence];
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+- (BOOL)connect {
+    [self setupStream];
+    
+    //NSString *jabberID = [[NSUserDefaults standardUserDefaults] stringForKey:@"userID"];
+    //NSString *myPassword = [[NSUserDefaults standardUserDefaults] stringForKey:@"userPassword"];
+    
+    NSString *jabberID = @"abc@119.81.44.122";//@"aap@119.81.44.122";//@"aman32605%40hotmail.com@119.81.44.122";
+    NSString *myPassword = @"1729";
+    
+    if (![xmppStream isDisconnected]) {
+        return YES;
     }
-    else{
-        [UIView animateWithDuration:0.3
-                         animations:^{
-                             //menuView.center = CGPointMake(menuView.center.x,                                                           menuView.center.y+480);
-                             menuView.alpha = 0.0;
-                             frndsCollection.center = CGPointMake(frndsCollection.center.x-78,
-                                                                  frndsCollection.center.y);
-                         }
-                         completion:^(BOOL finished){
-                             menuButton.enabled = YES;
-                             menuView.hidden = YES;
-                         }
-         ];
+    
+    if (jabberID == nil || myPassword == nil) {
+        return NO;
+    }
+    
+    [xmppStream setMyJID:[XMPPJID jidWithString:jabberID]];
+    //[xmppStream setMyJID:[XMPPJID jidWithUser:jabberID domain:@"119.81.44.122" resource:@"8f51f0b4"]];
+    password = myPassword;
+    
+    NSError *error = nil;
+    if (![xmppStream connectWithTimeout:1 error:&error])
+    {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error connecting"
+                                                            message:@"See console for error details."
+                                                           delegate:nil
+                                                  cancelButtonTitle:@"Ok"
+                                                  otherButtonTitles:nil];
+        [alertView show];
+        
+        return NO;
+    }
+    
+    return YES;
+}
+
+- (void)disconnect {
+    
+    [self goOffline];
+    [xmppStream disconnect];
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+- (void)applicationWillResignActive:(UIApplication *)application {
+    [self disconnect];
+}
+
+- (void)applicationDidBecomeActive:(UIApplication *)application {
+    [self connect];
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+- (void)xmppStreamDidDisconnect:(XMPPStream *)sender withError:(NSError *)error
+{
+    if (![xmppStream isConnected])
+    {
+        NSLog(@"Unable to connect to server. Check xmppStream.hostName");
+        [self connect];
+    }
+}
+
+- (void)xmppStreamDidConnect:(XMPPStream *)sender {
+    
+    // connection to the server successful
+    
+    if ([xmppStream isDisconnected]){
+        NSLog(@"Is DisConnected");
+        [self connect];
+    }
+    if ([xmppStream isConnecting]){
+        NSLog(@"Is Connecting");
+    }
+    if ([xmppStream isConnecting]){
+        NSLog(@"Is Connecting");
+    }
+    if ([xmppStream isConnected]){
+        NSLog(@"Is Connected");
+    }
+    
+    NSError *error = nil;
+    [[self xmppStream] authenticateWithPassword:password error:&error];
+    NSLog(@"%@",error);
+    
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+- (void)xmppStreamDidAuthenticate:(XMPPStream *)sender {
+    // authentication successful
+    [self goOnline];
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+- (void)xmppStream:(XMPPStream *)sender didReceiveMessage:(XMPPMessage *)message
+{
+    // message received
+    
+    NSString *msg = [[message elementForName:@"body"] stringValue];
+    NSString *from = [[message attributeForName:@"from"] stringValue];
+    NSLog(@"%@ , %@",msg,from);
+}
+
+- (void)xmppStream:(XMPPStream *)sender didReceivePresence:(XMPPPresence *)presence {
+    // a buddy went offline/online
+    NSString *presenceType = [presence type]; // online/offline
+    NSString *myUsername = [[sender myJID] user];
+    NSString *presenceFromUser = [[presence from] user];
+    
+    if (![presenceFromUser isEqualToString:myUsername]) {
+        
+        if ([presenceType isEqualToString:@"available"]) {
+            NSLog(@"Person Online");
+            //[chatDelegate newBuddyOnline:[NSString stringWithFormat:@"%@@%@", presenceFromUser, @"119.81.44.122"]];
+            
+        } else if ([presenceType isEqualToString:@"unavailable"]) {
+            NSLog(@"Person Offline");
+            //[chatDelegate buddyWentOffline:[NSString stringWithFormat:@"%@@%@", presenceFromUser, @"119.81.44.122"]];
+        }
     }
     
 }

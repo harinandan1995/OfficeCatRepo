@@ -10,6 +10,7 @@
 #import "ILTranslucentView.h"
 #import "bulletinTableViewCell.h"
 #import "GlobalFn.h"
+#import "friendsViewController.h"
 
 @interface bulletinViewController ()
 
@@ -107,8 +108,10 @@
     [rideArray addObject:help];
     
     [self setNeedsStatusBarAppearanceUpdate];
-    
-    [self connect];
+    if (!xmppStream.isConnected) {
+        NSLog(@"Connecting");
+        [self connect];
+    }
     
     // Do any additional setup after loading the view.
 }
@@ -217,6 +220,14 @@
     
 }
 
+-(IBAction)chatAction:(id)sender{
+    friendsViewController *viewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"friendsViewController"];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
+    navigationController.navigationBarHidden  = YES;
+    viewController.xmppStream = self.xmppStream;
+    [self presentViewController:navigationController animated:NO completion:nil];
+}
+
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 - (void)setupStream {
@@ -299,7 +310,7 @@
 {
     if (![xmppStream isConnected])
     {
-        NSLog(@"Unable to connect to server. Check xmppStream.hostName");
+        //NSLog(@"Unable to connect to server. Check xmppStream.hostName - bulletin");
         [self connect];
     }
 }
@@ -343,7 +354,7 @@
     
     NSString *msg = [[message elementForName:@"body"] stringValue];
     NSString *from = [[message attributeForName:@"from"] stringValue];
-    NSLog(@"%@ , %@",msg,from);
+    NSLog(@"Bulletin : %@ , %@",msg,from);
 }
 
 - (void)xmppStream:(XMPPStream *)sender didReceivePresence:(XMPPPresence *)presence {
@@ -361,14 +372,13 @@
         } else if ([presenceType isEqualToString:@"unavailable"]) {
             NSLog(@"Person Offline");
             //[chatDelegate buddyWentOffline:[NSString stringWithFormat:@"%@@%@", presenceFromUser, @"119.81.44.122"]];
-            
         }
-        
     }
     
 }
 
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

@@ -24,5 +24,6 @@
 
 @property (nonatomic , readonly) XMPPStream *xmppStream;
 -(IBAction)menuAction:(id)sender;
+-(IBAction)chatAction:(id)sender;
 
 @end

@@ -7,15 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "XMPP.h"
 
 @interface friendsViewController : UIViewController<UICollectionViewDelegate,UICollectionViewDataSource>{
     IBOutlet UICollectionView *frndsCollection;
     IBOutlet UIView *navigationView;
     IBOutlet UIView *menuView;
     IBOutlet UIButton *menuButton;
+    NSString *password;
     NSMutableArray *frndsArray;
 }
 
 -(IBAction)menuAction:(id)sender;
+@property (nonatomic,strong) XMPPStream *xmppStream;
 
 @end
