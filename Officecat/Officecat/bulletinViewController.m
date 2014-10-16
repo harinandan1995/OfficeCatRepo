@@ -34,6 +34,7 @@
     [getRideButton setTitleColor:[GlobalFn getColor:2] forState:UIControlStateNormal];
     [shareTaxiButton setTitleColor:[GlobalFn getColor:2] forState:UIControlStateNormal];
     [giveRideButton setTitleColor:[GlobalFn getColor:2] forState:UIControlStateNormal];
+    menuView.hidden = YES;
     
     // top translucent view
     ILTranslucentView *translucentView = [[ILTranslucentView alloc] initWithFrame:CGRectMake(0, 0, 320, 80)];
@@ -48,7 +49,7 @@
     [self.view sendSubviewToBack:navigationView];
     
     // bottom translucent view
-    ILTranslucentView *translucentView1 = [[ILTranslucentView alloc] initWithFrame:CGRectMake(0, 501, 320, 80)];
+    ILTranslucentView *translucentView1 = [[ILTranslucentView alloc] initWithFrame:CGRectMake(0, 508, 320, 60)];
     [self.view addSubview:translucentView1];
     
     //optional:
@@ -59,7 +60,6 @@
     
     [self.view sendSubviewToBack:translucentView1];
     [self.view sendSubviewToBack:bottomImage];
-    
     
     NSMutableDictionary *help = [[NSMutableDictionary alloc] init];
     [help setObject:@"Harinandan Teja" forKey:@"name"];
@@ -310,7 +310,7 @@
 {
     if (![xmppStream isConnected])
     {
-        //NSLog(@"Unable to connect to server. Check xmppStream.hostName - bulletin");
+        NSLog(@"Unable to connect to server. Check xmppStream.hostName - bulletin");
         [self connect];
     }
 }

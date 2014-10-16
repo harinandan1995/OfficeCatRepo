@@ -7,6 +7,7 @@
 //
 
 #import "friendsViewController.h"
+#import "bulletinViewController.h"
 #import "GlobalFn.h"
 
 @interface friendsViewController ()
@@ -66,6 +67,7 @@
     
     [self setNeedsStatusBarAppearanceUpdate];
     
+    disconnectHelp = @"0";
     //Setting up xmpp
     [xmppStream addDelegate:self delegateQueue:dispatch_get_main_queue()];
     if([xmppStream isDisconnected]){
@@ -124,6 +126,13 @@
 
 -(IBAction)menuAction:(id)sender
 {
+    disconnectHelp = @"1";
+    [self disconnect];
+    bulletinViewController *viewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"bulletinViewController"];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
+    navigationController.navigationBarHidden  = YES;
+    //viewController.xmppStream = self.xmppStream;
+    //[self presentViewController:navigationController animated:NO completion:nil];
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -187,7 +196,6 @@
 }
 
 - (void)disconnect {
-    
     [self goOffline];
     [xmppStream disconnect];
 }
@@ -206,11 +214,14 @@
 
 - (void)xmppStreamDidDisconnect:(XMPPStream *)sender withError:(NSError *)error
 {
-    if (![xmppStream isConnected])
-    {
-        NSLog(@"Unable to connect to server. Check xmppStream.hostName");
-        [self connect];
+    if ([disconnectHelp isEqualToString:@"0"]) {
+        if (![xmppStream isConnected])
+        {
+            NSLog(@"Unable to connect to server. Check xmppStream.hostName");
+            [self connect];
+        };
     }
+
 }
 
 - (void)xmppStreamDidConnect:(XMPPStream *)sender {

@@ -16,6 +16,7 @@
     IBOutlet UIButton *menuButton;
     NSString *password;
     NSMutableArray *frndsArray;
+    NSString *disconnectHelp;
 }
 
 -(IBAction)menuAction:(id)sender;
