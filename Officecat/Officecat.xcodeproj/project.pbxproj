@@ -212,6 +212,7 @@
 		8690398719D0973600C7105F /* loginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8690398619D0973600C7105F /* loginViewController.m */; };
 		8699BA1A19D57E6200FF6B37 /* intro2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8699BA1819D57E6200FF6B37 /* intro2.jpg */; };
 		8699BA1B19D57E6200FF6B37 /* intro1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8699BA1919D57E6200FF6B37 /* intro1.jpg */; };
+		86D3F7F319F657AE00166433 /* paymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D3F7F219F657AE00166433 /* paymentViewController.m */; };
 		86DA37E419D7E76B009AABEA /* GlobalFn.m in Sources */ = {isa = PBXBuildFile; fileRef = 86DA37E319D7E76B009AABEA /* GlobalFn.m */; };
 		875EA2C738B92A4085320486 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D67B7937B6094F58DDD9A3F1 /* libPods.a */; };
 		D52C6A2E19E9595600192B66 /* seperator2.png in Resources */ = {isa = PBXBuildFile; fileRef = D52C6A2D19E9595600192B66 /* seperator2.png */; };
@@ -598,6 +599,8 @@
 		8690398619D0973600C7105F /* loginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loginViewController.m; sourceTree = "<group>"; };
 		8699BA1819D57E6200FF6B37 /* intro2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = intro2.jpg; sourceTree = "<group>"; };
 		8699BA1919D57E6200FF6B37 /* intro1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = intro1.jpg; sourceTree = "<group>"; };
+		86D3F7F119F657AE00166433 /* paymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = paymentViewController.h; sourceTree = "<group>"; };
+		86D3F7F219F657AE00166433 /* paymentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = paymentViewController.m; sourceTree = "<group>"; };
 		86DA37E219D7E76B009AABEA /* GlobalFn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalFn.h; sourceTree = "<group>"; };
 		86DA37E319D7E76B009AABEA /* GlobalFn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalFn.m; sourceTree = "<group>"; };
 		D52C6A2D19E9595600192B66 /* seperator2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = seperator2.png; sourceTree = "<group>"; };
@@ -666,6 +669,8 @@
 		8635A25C19EFBA2E0087344F /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				86D3F7F119F657AE00166433 /* paymentViewController.h */,
+				86D3F7F219F657AE00166433 /* paymentViewController.m */,
 			);
 			name = Others;
 			sourceTree = "<group>";
@@ -1978,6 +1983,7 @@
 				8651AE0719DDC7D90086CA01 /* XMPPBandwidthMonitor.m in Sources */,
 				8651AE4119DDC7D90086CA01 /* XMPPSoftwareVersion.m in Sources */,
 				8635A26119EFBEDD0087344F /* frndsViewController.m in Sources */,
+				86D3F7F319F657AE00166433 /* paymentViewController.m in Sources */,
 				8651AEA619DDC9E10086CA01 /* DDDispatchQueueLogFormatter.m in Sources */,
 				8651AE3719DDC7D90086CA01 /* NSXMLElement+XEP_0059.m in Sources */,
 				8651AE3319DDC7D90086CA01 /* XMPPvCardTempEmail.m in Sources */,
