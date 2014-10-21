@@ -82,6 +82,60 @@
     [help setObject:@"1" forKey:@"read"];
     [help setObject:@"avan" forKey:@"id"];
     [frndsArray addObject:help];
+    help = [[NSMutableDictionary alloc] init];
+    [help setObject:@"Manish Poddar" forKey:@"name"];
+    [help setObject:@"profile2.jpg" forKey:@"email"];
+    [help setObject:@"Yeah i saw that one too" forKey:@"lastMsg"];
+    [help setObject:@"10:54pm" forKey:@"time"];
+    [help setObject:@"1" forKey:@"read"];
+    [help setObject:@"avan" forKey:@"id"];
+    [frndsArray addObject:help];
+
+    help = [[NSMutableDictionary alloc] init];
+    [help setObject:@"Manish Poddar" forKey:@"name"];
+    [help setObject:@"profile2.jpg" forKey:@"email"];
+    [help setObject:@"Yeah i saw that one too" forKey:@"lastMsg"];
+    [help setObject:@"10:54pm" forKey:@"time"];
+    [help setObject:@"1" forKey:@"read"];
+    [help setObject:@"avan" forKey:@"id"];
+    [frndsArray addObject:help];
+
+    help = [[NSMutableDictionary alloc] init];
+    [help setObject:@"Manish Poddar" forKey:@"name"];
+    [help setObject:@"profile2.jpg" forKey:@"email"];
+    [help setObject:@"Yeah i saw that one too" forKey:@"lastMsg"];
+    [help setObject:@"10:54pm" forKey:@"time"];
+    [help setObject:@"1" forKey:@"read"];
+    [help setObject:@"avan" forKey:@"id"];
+    [frndsArray addObject:help];
+
+    help = [[NSMutableDictionary alloc] init];
+    [help setObject:@"Manish Poddar" forKey:@"name"];
+    [help setObject:@"profile2.jpg" forKey:@"email"];
+    [help setObject:@"Yeah i saw that one too" forKey:@"lastMsg"];
+    [help setObject:@"10:54pm" forKey:@"time"];
+    [help setObject:@"1" forKey:@"read"];
+    [help setObject:@"avan" forKey:@"id"];
+    [frndsArray addObject:help];
+
+    help = [[NSMutableDictionary alloc] init];
+    [help setObject:@"Manish Poddar" forKey:@"name"];
+    [help setObject:@"profile2.jpg" forKey:@"email"];
+    [help setObject:@"Yeah i saw that one too" forKey:@"lastMsg"];
+    [help setObject:@"10:54pm" forKey:@"time"];
+    [help setObject:@"1" forKey:@"read"];
+    [help setObject:@"avan" forKey:@"id"];
+    [frndsArray addObject:help];
+
+    help = [[NSMutableDictionary alloc] init];
+    [help setObject:@"Manish Poddar" forKey:@"name"];
+    [help setObject:@"profile2.jpg" forKey:@"email"];
+    [help setObject:@"Yeah i saw that one too" forKey:@"lastMsg"];
+    [help setObject:@"10:54pm" forKey:@"time"];
+    [help setObject:@"1" forKey:@"read"];
+    [help setObject:@"avan" forKey:@"id"];
+    [frndsArray addObject:help];
+
     
     //[self setNeedsStatusBarAppearanceUpdate];
     // Do any additional setup after loading the view.
@@ -109,31 +163,29 @@
     {
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"frndsTableViewCell" owner:self options:nil];
         cell = [nib objectAtIndex:0];
+        
+        cell.backgroundColor = [GlobalFn getColor:0];
+        cell.nameLabel.textColor = [GlobalFn getColor:2];
+        cell.msgLabel.textColor = [UIColor whiteColor];
+        cell.timeLabel.textColor = [UIColor whiteColor];
+        cell.profilePic.layer.masksToBounds = YES;
+        cell.profilePic.layer.cornerRadius = 35;
+        //cell.profilePic.layer.borderWidth = 1.0;
+        cell.profilePic.layer.borderColor = [[GlobalFn getColor:2] CGColor];
+        cell.numberLabel.layer.masksToBounds = YES;
+        cell.numberLabel.layer.cornerRadius = 8;
+        cell.numberLabel.backgroundColor = [GlobalFn getColor:0];
+        cell.numberLabel.textColor = [GlobalFn getColor:2];
+        cell.numberLabel.layer.borderWidth = 1.0;
+        cell.numberLabel.layer.borderColor = [[GlobalFn getColor:2] CGColor];
     }
+    
     NSDictionary *help = frndsArray[indexPath.row];
-    
-    cell.backgroundColor = [GlobalFn getColor:0];
-    cell.nameLabel.textColor = [GlobalFn getColor:2];
-    cell.msgLabel.textColor = [UIColor whiteColor];
-    cell.timeLabel.textColor = [UIColor whiteColor];
-    cell.profilePic.layer.masksToBounds = YES;
-    cell.profilePic.layer.cornerRadius = 35;
-    cell.profilePic.layer.borderWidth = 1.0;
-    cell.profilePic.layer.borderColor = [[GlobalFn getColor:2] CGColor];
-    cell.numberLabel.layer.masksToBounds = YES;
-    cell.numberLabel.layer.cornerRadius = 8;
-    cell.numberLabel.backgroundColor = [GlobalFn getColor:0];
-    cell.numberLabel.textColor = [GlobalFn getColor:2];
-    cell.numberLabel.layer.borderWidth = 1.0;
-    cell.numberLabel.layer.borderColor = [[GlobalFn getColor:2] CGColor];
-    
     cell.nameLabel.text = help[@"name"];
     cell.msgLabel.text = help[@"lastMsg"];
     cell.numberLabel.text = @"3";
     cell.timeLabel.text = help[@"time"];
     cell.profilePic.image = [UIImage imageNamed:help[@"email"]];
-    
-    [cell.goButton addTarget:self action:@selector(gotoAction:) forControlEvents:UIControlEventTouchUpInside];
     
     return cell;
 }
@@ -143,7 +195,7 @@
     return 85;
 }
 
--(IBAction)gotoAction:(id)sender{
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     NSLog(@"asdas");
 }
 

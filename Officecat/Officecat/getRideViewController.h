@@ -16,6 +16,7 @@
     IBOutlet UITextField *anythingElseTextField;
     IBOutlet UIButton *goGetItButton;
     IBOutlet UIButton *forgetItButton;
+    IBOutlet UIButton *backButton;
     
     IBOutlet UISwitch *femaleSwitch;
     IBOutlet UISwitch *taxiSwitch;

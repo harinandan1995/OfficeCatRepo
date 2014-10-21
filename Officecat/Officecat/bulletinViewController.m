@@ -22,6 +22,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    refreshControl = [[UIRefreshControl alloc]init];
+    [rideTable addSubview:refreshControl];
+    //refreshControl.attributedTitle = [[NSAttributedString alloc] initWithString:@"Pull to refresh"];
+    [refreshControl addTarget:self action:@selector(refreshTable) forControlEvents:UIControlEventValueChanged];
+    
     self.view.backgroundColor = [GlobalFn getColor:1];
     menuView.backgroundColor = [GlobalFn getColor:2];
     menuView.layer.masksToBounds = YES;
@@ -118,6 +124,10 @@
 
 -(UIStatusBarStyle)preferredStatusBarStyle{
     return UIStatusBarStyleLightContent;
+}
+
+-(void)refreshTable{
+    NSLog(@"Refreshing");
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

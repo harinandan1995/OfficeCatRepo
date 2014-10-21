@@ -18,13 +18,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [GlobalFn getColor:0];
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
                                    initWithTarget:self
                                    action:@selector(dismissKeyboard)];
     [self.view addGestureRecognizer:tap];
     
+    [backButton setTitleColor:[GlobalFn getColor:2] forState:UIControlStateNormal];
+    
     // transparent view
-    ILTranslucentView *translucentView = [[ILTranslucentView alloc] initWithFrame:CGRectMake(0, 0, 320, 80)];
+    ILTranslucentView *translucentView = [[ILTranslucentView alloc] initWithFrame:CGRectMake(0, 0, 320, 67)];
     [self.view addSubview:translucentView];
     translucentView.translucentAlpha = 0.9;
     translucentView.translucentStyle = UIBarStyleBlack;
@@ -44,19 +47,19 @@
     goGetItButton.backgroundColor = [UIColor blackColor];
     forgetItButton.backgroundColor = [UIColor blackColor];
     
-    femaleSwitch.tintColor = [GlobalFn getColor:0];
+    femaleSwitch.tintColor = [GlobalFn getColor:1];
     femaleSwitch.onTintColor = [GlobalFn getColor:2];
-    taxiSwitch.tintColor = [GlobalFn getColor:0];
+    taxiSwitch.tintColor = [GlobalFn getColor:1];
     taxiSwitch.onTintColor = [GlobalFn getColor:2];
-    privateCarSwitch.tintColor = [GlobalFn getColor:0];
+    privateCarSwitch.tintColor = [GlobalFn getColor:1];
     privateCarSwitch.onTintColor = [GlobalFn getColor:2];
-    bothSwitch.tintColor = [GlobalFn getColor:0];
+    bothSwitch.tintColor = [GlobalFn getColor:1];
     bothSwitch.onTintColor = [GlobalFn getColor:2];
     
-    femaleSwitch.transform = CGAffineTransformMakeScale(0.75, 0.75);
-    taxiSwitch.transform = CGAffineTransformMakeScale(0.5, 0.5);
-    privateCarSwitch.transform = CGAffineTransformMakeScale(0.5, 0.5);
-    bothSwitch.transform = CGAffineTransformMakeScale(0.5, 0.5);
+    femaleSwitch.transform = CGAffineTransformMakeScale(0.6, 0.6);
+    taxiSwitch.transform = CGAffineTransformMakeScale(0.6, 0.6);
+    privateCarSwitch.transform = CGAffineTransformMakeScale(0.6, 0.6);
+    bothSwitch.transform = CGAffineTransformMakeScale(0.6, 0.6);
     
     femaleSwitch.on = NO;
     privateCarSwitch.on = NO;

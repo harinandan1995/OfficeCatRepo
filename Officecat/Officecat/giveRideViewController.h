@@ -15,6 +15,7 @@
     IBOutlet UITextField *notesTextField;
     IBOutlet UIButton *goGetItButton;
     IBOutlet UIButton *forgetItButton;
+    IBOutlet UIButton *backButton;
 }
 
 @end

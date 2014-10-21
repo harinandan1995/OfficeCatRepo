@@ -10,8 +10,6 @@
 
 @implementation frndsTableViewCell
 
-@synthesize goButton;
-
 - (void)awakeFromNib {
     // Initialization code
 }

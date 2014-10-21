@@ -15,5 +15,4 @@
 @property (nonatomic,strong) IBOutlet UILabel *timeLabel;
 @property (nonatomic,strong) IBOutlet UILabel *numberLabel;
 @property (nonatomic,strong) IBOutlet UIImageView *seenImage;
-@property (nonatomic,weak) IBOutlet UIButton *goButton;
 @end

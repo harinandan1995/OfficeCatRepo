@@ -18,6 +18,7 @@
     IBOutlet UIButton *giveRideButton;
     IBOutlet UIButton *menuButton;
     IBOutlet UIView *menuView;
+    UIRefreshControl *refreshControl;
     NSMutableArray *rideArray;
     NSString *password;
 }

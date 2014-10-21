@@ -18,6 +18,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [GlobalFn getColor:0];
+    
+    [backButton setTitleColor:[GlobalFn getColor:2] forState:UIControlStateNormal];
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
                                    initWithTarget:self
@@ -25,7 +28,7 @@
     [self.view addGestureRecognizer:tap];
     
     // transparent view
-    ILTranslucentView *translucentView = [[ILTranslucentView alloc] initWithFrame:CGRectMake(0, 0, 320, 80)];
+    ILTranslucentView *translucentView = [[ILTranslucentView alloc] initWithFrame:CGRectMake(0, 0, 320, 67)];
     [self.view addSubview:translucentView];
     translucentView.translucentAlpha = 0.9;
     translucentView.translucentStyle = UIBarStyleBlack;
