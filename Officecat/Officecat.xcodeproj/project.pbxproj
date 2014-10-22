@@ -191,6 +191,7 @@
 		8658EA8E19E56425008A6DC1 /* chat ico.png in Resources */ = {isa = PBXBuildFile; fileRef = 8658EA8319E56425008A6DC1 /* chat ico.png */; };
 		8658EA8F19E56425008A6DC1 /* menu ico.png in Resources */ = {isa = PBXBuildFile; fileRef = 8658EA8419E56425008A6DC1 /* menu ico.png */; };
 		8658EA9019E56425008A6DC1 /* serch ico.png in Resources */ = {isa = PBXBuildFile; fileRef = 8658EA8519E56425008A6DC1 /* serch ico.png */; };
+		86691BFE19F7AE3500B19BC7 /* nopic.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 86691BFD19F7AE3500B19BC7 /* nopic.jpg */; };
 		8673666619DFF8B400878417 /* seperator.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8673666519DFF8B400878417 /* seperator.jpg */; };
 		8690394319D0835300C7105F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8690394219D0835300C7105F /* Foundation.framework */; };
 		8690394519D0835300C7105F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8690394419D0835300C7105F /* CoreGraphics.framework */; };
@@ -213,7 +214,12 @@
 		8699BA1A19D57E6200FF6B37 /* intro2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8699BA1819D57E6200FF6B37 /* intro2.jpg */; };
 		8699BA1B19D57E6200FF6B37 /* intro1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8699BA1919D57E6200FF6B37 /* intro1.jpg */; };
 		86D3F7F319F657AE00166433 /* paymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86D3F7F219F657AE00166433 /* paymentViewController.m */; };
+		86D3F7F919F6634F00166433 /* whiteSeperator.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 86D3F7F819F6634F00166433 /* whiteSeperator.jpg */; };
+		86D3F7FD19F6668400166433 /* axisLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 86D3F7FA19F6668400166433 /* axisLogo.png */; };
+		86D3F7FE19F6668400166433 /* hdfcLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 86D3F7FB19F6668400166433 /* hdfcLogo.png */; };
+		86D3F7FF19F6668400166433 /* citiLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 86D3F7FC19F6668400166433 /* citiLogo.png */; };
 		86DA37E419D7E76B009AABEA /* GlobalFn.m in Sources */ = {isa = PBXBuildFile; fileRef = 86DA37E319D7E76B009AABEA /* GlobalFn.m */; };
+		86E2613B19F7A1E70021F532 /* profileUpdateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86E2613A19F7A1E70021F532 /* profileUpdateViewController.m */; };
 		875EA2C738B92A4085320486 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D67B7937B6094F58DDD9A3F1 /* libPods.a */; };
 		D52C6A2E19E9595600192B66 /* seperator2.png in Resources */ = {isa = PBXBuildFile; fileRef = D52C6A2D19E9595600192B66 /* seperator2.png */; };
 		D5D3606619E837B9008FB59D /* getRideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5D3606519E837B9008FB59D /* getRideViewController.m */; };
@@ -570,6 +576,7 @@
 		8658EA8319E56425008A6DC1 /* chat ico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chat ico.png"; sourceTree = "<group>"; };
 		8658EA8419E56425008A6DC1 /* menu ico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menu ico.png"; sourceTree = "<group>"; };
 		8658EA8519E56425008A6DC1 /* serch ico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "serch ico.png"; sourceTree = "<group>"; };
+		86691BFD19F7AE3500B19BC7 /* nopic.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nopic.jpg; sourceTree = "<group>"; };
 		8673666519DFF8B400878417 /* seperator.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = seperator.jpg; sourceTree = "<group>"; };
 		8690393F19D0835300C7105F /* Officecat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Officecat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8690394219D0835300C7105F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -601,8 +608,14 @@
 		8699BA1919D57E6200FF6B37 /* intro1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = intro1.jpg; sourceTree = "<group>"; };
 		86D3F7F119F657AE00166433 /* paymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = paymentViewController.h; sourceTree = "<group>"; };
 		86D3F7F219F657AE00166433 /* paymentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = paymentViewController.m; sourceTree = "<group>"; };
+		86D3F7F819F6634F00166433 /* whiteSeperator.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = whiteSeperator.jpg; sourceTree = "<group>"; };
+		86D3F7FA19F6668400166433 /* axisLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = axisLogo.png; sourceTree = "<group>"; };
+		86D3F7FB19F6668400166433 /* hdfcLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hdfcLogo.png; sourceTree = "<group>"; };
+		86D3F7FC19F6668400166433 /* citiLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = citiLogo.png; sourceTree = "<group>"; };
 		86DA37E219D7E76B009AABEA /* GlobalFn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalFn.h; sourceTree = "<group>"; };
 		86DA37E319D7E76B009AABEA /* GlobalFn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalFn.m; sourceTree = "<group>"; };
+		86E2613919F7A1E70021F532 /* profileUpdateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = profileUpdateViewController.h; sourceTree = "<group>"; };
+		86E2613A19F7A1E70021F532 /* profileUpdateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = profileUpdateViewController.m; sourceTree = "<group>"; };
 		D52C6A2D19E9595600192B66 /* seperator2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = seperator2.png; sourceTree = "<group>"; };
 		D5D3606419E837B9008FB59D /* getRideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getRideViewController.h; sourceTree = "<group>"; };
 		D5D3606519E837B9008FB59D /* getRideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getRideViewController.m; sourceTree = "<group>"; };
@@ -669,6 +682,8 @@
 		8635A25C19EFBA2E0087344F /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				86E2613919F7A1E70021F532 /* profileUpdateViewController.h */,
+				86E2613A19F7A1E70021F532 /* profileUpdateViewController.m */,
 				86D3F7F119F657AE00166433 /* paymentViewController.h */,
 				86D3F7F219F657AE00166433 /* paymentViewController.m */,
 			);
@@ -1706,6 +1721,11 @@
 		8690397A19D0848300C7105F /* images */ = {
 			isa = PBXGroup;
 			children = (
+				86691BFD19F7AE3500B19BC7 /* nopic.jpg */,
+				86D3F7FA19F6668400166433 /* axisLogo.png */,
+				86D3F7FB19F6668400166433 /* hdfcLogo.png */,
+				86D3F7FC19F6668400166433 /* citiLogo.png */,
+				86D3F7F819F6634F00166433 /* whiteSeperator.jpg */,
 				8635A27C19EFD6F00087344F /* deliveredIcon.png */,
 				8635A27619EFD24B0087344F /* chatMenu.png */,
 				8635A27419EFCC050087344F /* goIcon.png */,
@@ -1826,6 +1846,7 @@
 				8606C70519DFF6A2006AC140 /* settingsIcon.jpg in Resources */,
 				8646B06819E9230F00CD1F6D /* bulletinTableViewCell.xib in Resources */,
 				8606C6EB19DFDFF0006AC140 /* newChat.jpg in Resources */,
+				86D3F7FD19F6668400166433 /* axisLogo.png in Resources */,
 				8658EA8B19E56425008A6DC1 /* seeting ico.png in Resources */,
 				8651AEAD19DDC9E10086CA01 /* build-libidn.sh in Resources */,
 				8658EA8619E56425008A6DC1 /* map ico.png in Resources */,
@@ -1838,6 +1859,7 @@
 				8635A26919EFC19E0087344F /* chatSearch.png in Resources */,
 				8635A27719EFD24B0087344F /* chatMenu.png in Resources */,
 				8606C70219DFF6A2006AC140 /* historyIcon.jpg in Resources */,
+				86691BFE19F7AE3500B19BC7 /* nopic.jpg in Resources */,
 				D5D3606819E83C5A008FB59D /* background.jpg in Resources */,
 				8658EA8F19E56425008A6DC1 /* menu ico.png in Resources */,
 				8606C70619DFF6A2006AC140 /* usersIcon.jpg in Resources */,
@@ -1848,6 +1870,7 @@
 				8658EA8E19E56425008A6DC1 /* chat ico.png in Resources */,
 				8658EA8C19E56425008A6DC1 /* line scroll.png in Resources */,
 				8699BA1B19D57E6200FF6B37 /* intro1.jpg in Resources */,
+				86D3F7FE19F6668400166433 /* hdfcLogo.png in Resources */,
 				8606C70319DFF6A2006AC140 /* paymentsIcon.jpg in Resources */,
 				8606C6EC19DFDFF0006AC140 /* search.jpg in Resources */,
 				8658EA8919E56425008A6DC1 /* cat logo.png in Resources */,
@@ -1856,11 +1879,13 @@
 				8606C70419DFF6A2006AC140 /* profileIcon.jpg in Resources */,
 				8606C6FC19DFF3B7006AC140 /* profile5.jpeg in Resources */,
 				8658EA8719E56425008A6DC1 /* car ico.png in Resources */,
+				86D3F7FF19F6668400166433 /* citiLogo.png in Resources */,
 				8658EA8A19E56425008A6DC1 /* ruppes logo.png in Resources */,
 				D52C6A2E19E9595600192B66 /* seperator2.png in Resources */,
 				8606C6F619DFE797006AC140 /* profile2.jpg in Resources */,
 				8606C6EA19DFDFF0006AC140 /* menuDrawer.jpg in Resources */,
 				8635A25E19EFBB440087344F /* home button.png in Resources */,
+				86D3F7F919F6634F00166433 /* whiteSeperator.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2059,6 +2084,7 @@
 				8651AEA319DDC9E10086CA01 /* DDLog.m in Sources */,
 				8651AEA419DDC9E10086CA01 /* DDTTYLogger.m in Sources */,
 				8651AE5B19DDC7D90086CA01 /* XMPPMessage+XEP_0224.m in Sources */,
+				86E2613B19F7A1E70021F532 /* profileUpdateViewController.m in Sources */,
 				863F8BE119D58DB800331663 /* ServerCall.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -16,6 +16,7 @@
     IBOutlet UIView *netBankView;
     IBOutlet UIView *debitView;
     IBOutlet UIView *creditView;
+    IBOutlet UIButton *payButton1;
 }
 
 @end

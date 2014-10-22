@@ -18,6 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [GlobalFn getColor:0];
     // transparent view
     ILTranslucentView *translucentView = [[ILTranslucentView alloc] initWithFrame:CGRectMake(0, 0, 320, 67)];
     [self.view addSubview:translucentView];
@@ -26,8 +27,24 @@
     translucentView.translucentTintColor = [UIColor clearColor];
     translucentView.backgroundColor = [UIColor clearColor];
     [self.view sendSubviewToBack:translucentView];
-    self.view.backgroundColor = [GlobalFn getColor:0];
+    
+    ILTranslucentView *translucentView2 = [[ILTranslucentView alloc] initWithFrame:CGRectMake(0, 152, 320, 72)];
+    [self.view addSubview:translucentView2];
+    translucentView2.translucentAlpha = 0.9;
+    translucentView2.translucentStyle = UIBarStyleBlack;
+    translucentView2.translucentTintColor = [GlobalFn getColor:7];
+    translucentView2.backgroundColor = [UIColor clearColor];
+    [self.view sendSubviewToBack:translucentView2];
+    
+    netBankView.backgroundColor = [GlobalFn getColor:1];
+    netBankView.layer.masksToBounds = YES;
+    netBankView.layer.cornerRadius = 10;
+    payButton1.backgroundColor =[GlobalFn getColor:4];
+    
     // Do any additional setup after loading the view.
+}
+-(UIStatusBarStyle)preferredStatusBarStyle{
+    return UIStatusBarStyleLightContent;
 }
 
 - (void)didReceiveMemoryWarning {

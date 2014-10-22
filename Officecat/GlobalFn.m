@@ -114,6 +114,10 @@
         case 6:
             return  [self colorWithHexString:@"0b0706"]; // Black
             break;
+        case 7:
+            return  [self colorWithHexString:@"008080"]; // Black
+            break;
+            
             
         default:
             break;
