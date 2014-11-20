@@ -40,6 +40,8 @@
 		8646B06219E9228200CD1F6D /* wallpaper1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8646B06119E9228200CD1F6D /* wallpaper1.jpg */; };
 		8646B06719E9230F00CD1F6D /* bulletinTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8646B06519E9230F00CD1F6D /* bulletinTableViewCell.m */; };
 		8646B06819E9230F00CD1F6D /* bulletinTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8646B06619E9230F00CD1F6D /* bulletinTableViewCell.xib */; };
+		864A23A219FC229C00320C75 /* visa.png in Resources */ = {isa = PBXBuildFile; fileRef = 864A23A019FC229C00320C75 /* visa.png */; };
+		864A23A319FC229C00320C75 /* mastercard.gif in Resources */ = {isa = PBXBuildFile; fileRef = 864A23A119FC229C00320C75 /* mastercard.gif */; };
 		8651ADF419DDC7D90086CA01 /* XMPPAnonymousAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = 8651ACDA19DDC7D80086CA01 /* XMPPAnonymousAuthentication.m */; };
 		8651ADF519DDC7D90086CA01 /* XMPPDeprecatedDigestAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = 8651ACDD19DDC7D80086CA01 /* XMPPDeprecatedDigestAuthentication.m */; };
 		8651ADF619DDC7D90086CA01 /* XMPPDeprecatedPlainAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = 8651ACE019DDC7D80086CA01 /* XMPPDeprecatedPlainAuthentication.m */; };
@@ -284,6 +286,8 @@
 		8646B06419E9230F00CD1F6D /* bulletinTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bulletinTableViewCell.h; sourceTree = "<group>"; };
 		8646B06519E9230F00CD1F6D /* bulletinTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = bulletinTableViewCell.m; sourceTree = "<group>"; };
 		8646B06619E9230F00CD1F6D /* bulletinTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = bulletinTableViewCell.xib; sourceTree = "<group>"; };
+		864A23A019FC229C00320C75 /* visa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = visa.png; sourceTree = "<group>"; };
+		864A23A119FC229C00320C75 /* mastercard.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = mastercard.gif; sourceTree = "<group>"; };
 		8651ACD919DDC7D80086CA01 /* XMPPAnonymousAuthentication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMPPAnonymousAuthentication.h; sourceTree = "<group>"; };
 		8651ACDA19DDC7D80086CA01 /* XMPPAnonymousAuthentication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMPPAnonymousAuthentication.m; sourceTree = "<group>"; };
 		8651ACDC19DDC7D80086CA01 /* XMPPDeprecatedDigestAuthentication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMPPDeprecatedDigestAuthentication.h; sourceTree = "<group>"; };
@@ -1721,6 +1725,8 @@
 		8690397A19D0848300C7105F /* images */ = {
 			isa = PBXGroup;
 			children = (
+				864A23A019FC229C00320C75 /* visa.png */,
+				864A23A119FC229C00320C75 /* mastercard.gif */,
 				86691BFD19F7AE3500B19BC7 /* nopic.jpg */,
 				86D3F7FA19F6668400166433 /* axisLogo.png */,
 				86D3F7FB19F6668400166433 /* hdfcLogo.png */,
@@ -1863,8 +1869,10 @@
 				D5D3606819E83C5A008FB59D /* background.jpg in Resources */,
 				8658EA8F19E56425008A6DC1 /* menu ico.png in Resources */,
 				8606C70619DFF6A2006AC140 /* usersIcon.jpg in Resources */,
+				864A23A219FC229C00320C75 /* visa.png in Resources */,
 				8658EA8D19E56425008A6DC1 /* car.png in Resources */,
 				8690395619D0835300C7105F /* Main.storyboard in Resources */,
+				864A23A319FC229C00320C75 /* mastercard.gif in Resources */,
 				8651AEA819DDC9E10086CA01 /* README.txt in Resources */,
 				8658EA9019E56425008A6DC1 /* serch ico.png in Resources */,
 				8658EA8E19E56425008A6DC1 /* chat ico.png in Resources */,

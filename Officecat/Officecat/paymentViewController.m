@@ -19,6 +19,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [GlobalFn getColor:0];
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+                                   initWithTarget:self
+                                   action:@selector(dismissKeyboard)];
+    [self.view addGestureRecognizer:tap];
+    
+    // setting initial properties
+    debitView.hidden = YES;
+    payUsingDebit.hidden = YES;
+    image1.hidden = YES;
+    image2.hidden = YES;
+    image3.hidden = YES;
+    
+    
     // transparent view
     ILTranslucentView *translucentView = [[ILTranslucentView alloc] initWithFrame:CGRectMake(0, 0, 320, 67)];
     [self.view addSubview:translucentView];
@@ -41,10 +55,82 @@
     netBankView.layer.cornerRadius = 10;
     payButton1.backgroundColor =[GlobalFn getColor:4];
     
+    creditView.backgroundColor = [GlobalFn getColor:1];
+    creditView.layer.masksToBounds = YES;
+    creditView.layer.cornerRadius = 10;
+    payButton2.backgroundColor =[GlobalFn getColor:4];
+    expiryDateTextView.backgroundColor = [GlobalFn getColor:1];
+    
+    debitView.backgroundColor = [GlobalFn getColor:1];
+    debitView.layer.masksToBounds = YES;
+    debitView.layer.cornerRadius = 10;
+    payButton3.backgroundColor =[GlobalFn getColor:4];
+    
     // Do any additional setup after loading the view.
 }
 -(UIStatusBarStyle)preferredStatusBarStyle{
     return UIStatusBarStyleLightContent;
+}
+
+- (void)dismissKeyboard;
+{
+    [cardNumberTextField2 resignFirstResponder];
+    [nameOnCardTextField2 resignFirstResponder];
+    [cvvTextField2 resignFirstResponder];
+    [nameOnCardTextField2 resignFirstResponder];
+}
+
+-(IBAction)netBankButtonAction:(id)sender
+{
+    if(netBankView.hidden){
+        netBankButton.enabled = NO;
+        netBankView.hidden = NO;
+        payUsingNet.hidden = NO;
+        [UIView animateWithDuration:0.3
+                         animations:^{
+                             //menuView.center = CGPointMake(menuView.center.x,                                                           menuView.center.y-480);
+                             netBankView.alpha = 1.0;
+                             payUsingNet.alpha = 1.0;
+                             debitView.alpha = 0.0;
+                             payUsingDebit.alpha = 0.0;
+                             image1.alpha = 0.0;
+                             image2.alpha = 0.0;
+                             image3.alpha = 0.0;
+                         }
+                         completion:^(BOOL finished){
+                             netBankButton.enabled = YES;
+                             debitView.hidden = YES;
+                         }
+         ];
+    }
+}
+
+-(IBAction)debitBankButtonAction:(id)sender
+{
+    if(debitView.hidden){
+        debitButton.enabled = NO;
+        debitView.hidden = NO;
+        payUsingDebit.hidden = NO;
+        [UIView animateWithDuration:0.3
+                         animations:^{
+                             //menuView.center = CGPointMake(menuView.center.x,                                                           menuView.center.y-480);
+                             debitView.alpha = 1.0;
+                             payUsingDebit.alpha = 1.0;
+                             netBankView.alpha = 0.0;
+                             payUsingNet.alpha = 0.0;
+                             image1.alpha = 1.0;
+                             image2.alpha = 1.0;
+                             image3.alpha = 1.0;
+                         }
+                         completion:^(BOOL finished){
+                             debitButton.enabled = YES;
+                             netBankView.hidden = YES;
+                             image1.hidden = NO;
+                             image2.hidden = NO;
+                             image3.hidden = NO;
+                         }
+         ];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

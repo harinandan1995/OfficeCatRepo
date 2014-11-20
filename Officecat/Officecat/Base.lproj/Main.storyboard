@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A388b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="w68-3y-xPG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A388b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="dtE-2G-9TX">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
@@ -378,6 +378,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="netBankButtonAction:" destination="Jwt-eD-c6v" eventType="touchUpInside" id="b8F-3Q-Ys7"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fiE-WO-HCS">
                                 <rect key="frame" x="109" y="162" width="99" height="51"/>
@@ -394,6 +397,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="debitBankButtonAction:" destination="Jwt-eD-c6v" eventType="touchUpInside" id="EnX-zx-ev8"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="whiteSeperator.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="8zi-BQ-3mt">
                                 <rect key="frame" x="104" y="163" width="1" height="50"/>
@@ -404,7 +410,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vnt-Uj-024">
-                                <rect key="frame" x="36" y="272" width="249" height="182"/>
+                                <rect key="frame" x="36" y="274" width="249" height="182"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="axisLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="iVW-wa-SsC">
                                         <rect key="frame" x="12" y="40" width="68" height="23"/>
@@ -453,25 +459,99 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pay using Net Banking" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Odz-47-1XK">
-                                <rect key="frame" x="36" y="238" width="147" height="21"/>
+                                <rect key="frame" x="31" y="238" width="147" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VQj-Ud-jTd">
+                                <rect key="frame" x="36" y="274" width="249" height="182"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wwl-aJ-Hd0">
+                                        <rect key="frame" x="10" y="151" width="229" height="23"/>
+                                        <state key="normal" title="Pay">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Expiry Date" translatesAutoresizingMaskIntoConstraints="NO" id="KB5-hb-67u">
+                                        <rect key="frame" x="85" y="39" width="44" height="40"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Card Number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x9J-A6-oNL">
+                                        <rect key="frame" x="8" y="8" width="231" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name on Card" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dIL-dB-O8T">
+                                        <rect key="frame" x="8" y="85" width="233" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CVV" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cfT-S8-F8u">
+                                        <rect key="frame" x="131" y="47" width="68" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="citiLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="4Mo-vK-G0j">
+                                        <rect key="frame" x="213" y="53" width="26" height="17"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Save this card for faster payments" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="99W-tV-ngq">
+                                        <rect key="frame" x="44" y="123" width="263" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pay using Debit Card" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oWf-qN-J1Z">
+                                <rect key="frame" x="31" y="238" width="147" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mastercard.gif" translatesAutoresizingMaskIntoConstraints="NO" id="Ziv-0j-3CK">
+                                <rect key="frame" x="222" y="239" width="35" height="20"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="citiLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="Gxg-H6-21b">
+                                <rect key="frame" x="266" y="239" width="35" height="20"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="visa.png" translatesAutoresizingMaskIntoConstraints="NO" id="tUr-No-dm9">
+                                <rect key="frame" x="176" y="239" width="35" height="20"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="cardNumberTextField2" destination="x9J-A6-oNL" id="XgI-Ec-8sp"/>
                         <outlet property="creditButton" destination="fiE-WO-HCS" id="h8S-II-oXe"/>
+                        <outlet property="cvvTextField2" destination="cfT-S8-F8u" id="9S1-YI-7ux"/>
                         <outlet property="debitButton" destination="Sbm-XG-wLh" id="hma-6M-UGw"/>
+                        <outlet property="debitView" destination="VQj-Ud-jTd" id="S5h-5g-Jpd"/>
+                        <outlet property="expiryDateTextView" destination="KB5-hb-67u" id="kfN-1i-Fbm"/>
+                        <outlet property="image1" destination="tUr-No-dm9" id="EnB-dd-AGj"/>
+                        <outlet property="image2" destination="Ziv-0j-3CK" id="XWr-Et-nen"/>
+                        <outlet property="image3" destination="Gxg-H6-21b" id="yN5-Zk-rM0"/>
+                        <outlet property="nameOnCardTextField2" destination="dIL-dB-O8T" id="BhQ-BU-dsw"/>
                         <outlet property="netBankButton" destination="FLr-uV-czo" id="ihc-tf-VxG"/>
-                        <outlet property="netBankView" destination="Vnt-Uj-024" id="ZLN-D0-Tj1"/>
+                        <outlet property="netBankView" destination="Vnt-Uj-024" id="eZ8-Ig-VGv"/>
                         <outlet property="payButton1" destination="Fq7-xe-rKc" id="ZgV-9p-qcZ"/>
+                        <outlet property="payButton2" destination="wwl-aJ-Hd0" id="a3F-LQ-lgi"/>
+                        <outlet property="payUsingDebit" destination="oWf-qN-J1Z" id="zt2-LM-rpd"/>
+                        <outlet property="payUsingNet" destination="Odz-47-1XK" id="qhZ-vs-6Wg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w9J-GO-pEA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="554" y="1372"/>
+            <point key="canvasLocation" x="565" y="1424"/>
         </scene>
         <!--Get Ride View Controller-->
         <scene sceneID="9BJ-pa-MKs">
@@ -1227,6 +1307,7 @@
         <image name="home button.png" width="600" height="569"/>
         <image name="intro1.jpg" width="360" height="640"/>
         <image name="logo.jpg" width="276" height="121"/>
+        <image name="mastercard.gif" width="1255" height="758"/>
         <image name="menu ico.png" width="63" height="43"/>
         <image name="paymentsIcon.jpg" width="174" height="204"/>
         <image name="profile1.jpg" width="445" height="300"/>
@@ -1237,6 +1318,7 @@
         <image name="serch ico.png" width="60" height="48"/>
         <image name="settingsIcon.jpg" width="159" height="188"/>
         <image name="usersIcon.jpg" width="170" height="228"/>
+        <image name="visa.png" width="1282" height="414"/>
         <image name="wallpaper1.jpg" width="2000" height="1000"/>
         <image name="whiteSeperator.jpg" width="3" height="301"/>
     </resources>
