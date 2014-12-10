@@ -117,7 +117,21 @@
         case 7:
             return  [self colorWithHexString:@"008080"]; // Black
             break;
-            
+        case 8:
+            return  [self colorWithHexString:@"ebe2e2"]; // Light White
+            break;
+        case 9:
+            return  [self colorWithHexString:@"313437"]; // Payment background color
+            break;
+        case 10:
+            return  [self colorWithHexString:@"b1b1b1"]; // payment method type text color
+            break;
+        case 11:
+            return  [self colorWithHexString:@"575757"]; // Gray color for payment text
+            break;
+        case 12:
+            return  [self colorWithHexString:@"efc01e"]; // Light yellow for payment
+            break;
             
         default:
             break;

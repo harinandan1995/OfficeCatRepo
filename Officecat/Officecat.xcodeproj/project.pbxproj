@@ -40,7 +40,6 @@
 		8646B06219E9228200CD1F6D /* wallpaper1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8646B06119E9228200CD1F6D /* wallpaper1.jpg */; };
 		8646B06719E9230F00CD1F6D /* bulletinTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8646B06519E9230F00CD1F6D /* bulletinTableViewCell.m */; };
 		8646B06819E9230F00CD1F6D /* bulletinTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8646B06619E9230F00CD1F6D /* bulletinTableViewCell.xib */; };
-		864A23A219FC229C00320C75 /* visa.png in Resources */ = {isa = PBXBuildFile; fileRef = 864A23A019FC229C00320C75 /* visa.png */; };
 		864A23A319FC229C00320C75 /* mastercard.gif in Resources */ = {isa = PBXBuildFile; fileRef = 864A23A119FC229C00320C75 /* mastercard.gif */; };
 		8651ADF419DDC7D90086CA01 /* XMPPAnonymousAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = 8651ACDA19DDC7D80086CA01 /* XMPPAnonymousAuthentication.m */; };
 		8651ADF519DDC7D90086CA01 /* XMPPDeprecatedDigestAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = 8651ACDD19DDC7D80086CA01 /* XMPPDeprecatedDigestAuthentication.m */; };
@@ -224,9 +223,14 @@
 		86E2613B19F7A1E70021F532 /* profileUpdateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86E2613A19F7A1E70021F532 /* profileUpdateViewController.m */; };
 		875EA2C738B92A4085320486 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D67B7937B6094F58DDD9A3F1 /* libPods.a */; };
 		D52C6A2E19E9595600192B66 /* seperator2.png in Resources */ = {isa = PBXBuildFile; fileRef = D52C6A2D19E9595600192B66 /* seperator2.png */; };
+		D5A0D69B1A3712AD00BE3E5C /* design.png in Resources */ = {isa = PBXBuildFile; fileRef = D5A0D69A1A3712AD00BE3E5C /* design.png */; };
+		D5A0D69E1A37140100BE3E5C /* newPaymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5A0D69D1A37140100BE3E5C /* newPaymentViewController.m */; };
 		D5D3606619E837B9008FB59D /* getRideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5D3606519E837B9008FB59D /* getRideViewController.m */; };
 		D5D3606819E83C5A008FB59D /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D5D3606719E83C5A008FB59D /* background.jpg */; };
 		D5D3606B19E85155008FB59D /* giveRideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5D3606A19E85155008FB59D /* giveRideViewController.m */; };
+		D5F808041A381E3B00ADAD30 /* american-express.png in Resources */ = {isa = PBXBuildFile; fileRef = D5F808011A381E3B00ADAD30 /* american-express.png */; };
+		D5F808051A381E3B00ADAD30 /* maestro.png in Resources */ = {isa = PBXBuildFile; fileRef = D5F808021A381E3B00ADAD30 /* maestro.png */; };
+		D5F808061A381E3B00ADAD30 /* visa.png in Resources */ = {isa = PBXBuildFile; fileRef = D5F808031A381E3B00ADAD30 /* visa.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -286,7 +290,6 @@
 		8646B06419E9230F00CD1F6D /* bulletinTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = bulletinTableViewCell.h; sourceTree = "<group>"; };
 		8646B06519E9230F00CD1F6D /* bulletinTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = bulletinTableViewCell.m; sourceTree = "<group>"; };
 		8646B06619E9230F00CD1F6D /* bulletinTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = bulletinTableViewCell.xib; sourceTree = "<group>"; };
-		864A23A019FC229C00320C75 /* visa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = visa.png; sourceTree = "<group>"; };
 		864A23A119FC229C00320C75 /* mastercard.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = mastercard.gif; sourceTree = "<group>"; };
 		8651ACD919DDC7D80086CA01 /* XMPPAnonymousAuthentication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMPPAnonymousAuthentication.h; sourceTree = "<group>"; };
 		8651ACDA19DDC7D80086CA01 /* XMPPAnonymousAuthentication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMPPAnonymousAuthentication.m; sourceTree = "<group>"; };
@@ -621,11 +624,17 @@
 		86E2613919F7A1E70021F532 /* profileUpdateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = profileUpdateViewController.h; sourceTree = "<group>"; };
 		86E2613A19F7A1E70021F532 /* profileUpdateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = profileUpdateViewController.m; sourceTree = "<group>"; };
 		D52C6A2D19E9595600192B66 /* seperator2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = seperator2.png; sourceTree = "<group>"; };
+		D5A0D69A1A3712AD00BE3E5C /* design.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = design.png; sourceTree = "<group>"; };
+		D5A0D69C1A37140100BE3E5C /* newPaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = newPaymentViewController.h; sourceTree = "<group>"; };
+		D5A0D69D1A37140100BE3E5C /* newPaymentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = newPaymentViewController.m; sourceTree = "<group>"; };
 		D5D3606419E837B9008FB59D /* getRideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = getRideViewController.h; sourceTree = "<group>"; };
 		D5D3606519E837B9008FB59D /* getRideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = getRideViewController.m; sourceTree = "<group>"; };
 		D5D3606719E83C5A008FB59D /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
 		D5D3606919E85154008FB59D /* giveRideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = giveRideViewController.h; sourceTree = "<group>"; };
 		D5D3606A19E85155008FB59D /* giveRideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = giveRideViewController.m; sourceTree = "<group>"; };
+		D5F808011A381E3B00ADAD30 /* american-express.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "american-express.png"; sourceTree = "<group>"; };
+		D5F808021A381E3B00ADAD30 /* maestro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = maestro.png; sourceTree = "<group>"; };
+		D5F808031A381E3B00ADAD30 /* visa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = visa.png; sourceTree = "<group>"; };
 		D67B7937B6094F58DDD9A3F1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -690,6 +699,8 @@
 				86E2613A19F7A1E70021F532 /* profileUpdateViewController.m */,
 				86D3F7F119F657AE00166433 /* paymentViewController.h */,
 				86D3F7F219F657AE00166433 /* paymentViewController.m */,
+				D5A0D69C1A37140100BE3E5C /* newPaymentViewController.h */,
+				D5A0D69D1A37140100BE3E5C /* newPaymentViewController.m */,
 			);
 			name = Others;
 			sourceTree = "<group>";
@@ -1725,7 +1736,10 @@
 		8690397A19D0848300C7105F /* images */ = {
 			isa = PBXGroup;
 			children = (
-				864A23A019FC229C00320C75 /* visa.png */,
+				D5F808011A381E3B00ADAD30 /* american-express.png */,
+				D5F808021A381E3B00ADAD30 /* maestro.png */,
+				D5F808031A381E3B00ADAD30 /* visa.png */,
+				D5A0D69A1A3712AD00BE3E5C /* design.png */,
 				864A23A119FC229C00320C75 /* mastercard.gif */,
 				86691BFD19F7AE3500B19BC7 /* nopic.jpg */,
 				86D3F7FA19F6668400166433 /* axisLogo.png */,
@@ -1845,6 +1859,7 @@
 			files = (
 				8690395B19D0835300C7105F /* Images.xcassets in Resources */,
 				8673666619DFF8B400878417 /* seperator.jpg in Resources */,
+				D5F808061A381E3B00ADAD30 /* visa.png in Resources */,
 				8690398119D08CD000C7105F /* download.jpeg in Resources */,
 				8606C6F719DFE797006AC140 /* profile3.jpeg in Resources */,
 				8699BA1A19D57E6200FF6B37 /* intro2.jpg in Resources */,
@@ -1854,6 +1869,7 @@
 				8606C6EB19DFDFF0006AC140 /* newChat.jpg in Resources */,
 				86D3F7FD19F6668400166433 /* axisLogo.png in Resources */,
 				8658EA8B19E56425008A6DC1 /* seeting ico.png in Resources */,
+				D5A0D69B1A3712AD00BE3E5C /* design.png in Resources */,
 				8651AEAD19DDC9E10086CA01 /* build-libidn.sh in Resources */,
 				8658EA8619E56425008A6DC1 /* map ico.png in Resources */,
 				8658EA8819E56425008A6DC1 /* cat balck ico.png in Resources */,
@@ -1869,7 +1885,6 @@
 				D5D3606819E83C5A008FB59D /* background.jpg in Resources */,
 				8658EA8F19E56425008A6DC1 /* menu ico.png in Resources */,
 				8606C70619DFF6A2006AC140 /* usersIcon.jpg in Resources */,
-				864A23A219FC229C00320C75 /* visa.png in Resources */,
 				8658EA8D19E56425008A6DC1 /* car.png in Resources */,
 				8690395619D0835300C7105F /* Main.storyboard in Resources */,
 				864A23A319FC229C00320C75 /* mastercard.gif in Resources */,
@@ -1885,6 +1900,7 @@
 				8606C6FB19DFF3B7006AC140 /* profile4.jpg in Resources */,
 				8606C6F819DFE797006AC140 /* profile1.jpg in Resources */,
 				8606C70419DFF6A2006AC140 /* profileIcon.jpg in Resources */,
+				D5F808041A381E3B00ADAD30 /* american-express.png in Resources */,
 				8606C6FC19DFF3B7006AC140 /* profile5.jpeg in Resources */,
 				8658EA8719E56425008A6DC1 /* car ico.png in Resources */,
 				86D3F7FF19F6668400166433 /* citiLogo.png in Resources */,
@@ -1894,6 +1910,7 @@
 				8606C6EA19DFDFF0006AC140 /* menuDrawer.jpg in Resources */,
 				8635A25E19EFBB440087344F /* home button.png in Resources */,
 				86D3F7F919F6634F00166433 /* whiteSeperator.jpg in Resources */,
+				D5F808051A381E3B00ADAD30 /* maestro.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1995,6 +2012,7 @@
 				8651ADF419DDC7D90086CA01 /* XMPPAnonymousAuthentication.m in Sources */,
 				8651AE1E19DDC7D90086CA01 /* XMPPRoomMessageCoreDataStorageObject.m in Sources */,
 				D5D3606B19E85155008FB59D /* giveRideViewController.m in Sources */,
+				D5A0D69E1A37140100BE3E5C /* newPaymentViewController.m in Sources */,
 				8651AE2B19DDC7D90086CA01 /* XMPPvCardAvatarCoreDataStorageObject.m in Sources */,
 				8651AE5219DDC7D90086CA01 /* XMPPMessageDeliveryReceipts.m in Sources */,
 				8606C6EF19DFE190006AC140 /* chatViewController.m in Sources */,
